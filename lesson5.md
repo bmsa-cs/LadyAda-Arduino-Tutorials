@@ -7,7 +7,7 @@ We've done a lot so far, blinking lights, printing messages...all of that stuff 
 ## What you'll need:
 
 |Image|Item|Purchase|Price|
-|--- |--- |--- |---|
+|:---:|:--:|:------:|:---:|
 | ![](images/diecimilla.jpg) |Assembled Arduino board, preferrably a Diecimila (or whatever the latest version is) but NG is OK too|[Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50)|$35|
 | ![](images/usbcable.jpg) |USB Cable. Standard A-B cable is required. Any length is OK.|[Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62) <br> Or any computer supply store |$5|
 | ![](images/3mmredled_t.jpg)|5 Red LEDs <br> The brighter the better|Any electronics supply store | $3|

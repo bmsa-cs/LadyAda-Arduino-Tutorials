@@ -9,12 +9,12 @@ You've started modifying sketches, and played a bit with the onboard LED (or if 
 |Image|Item|Location|Price|
 |:-:|:-:|:-:|:-:|
 |[![](images/diecimilla.jpg)](images/attiny2313dip.jpg) | Assembled Arduino board, preferrably a Diecimila (or whatever the latest version is) but NG is OK too | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |
-|[![](images/usbcable.jpg)](images/10MHzcermosc.jpg) | USB Cable. <brStandard A-B cable is required. Any length is OK. | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62) | Or any computer supply store | $5 |
-| ![](images/clear5mmled_t.jpg) | LEDs <brFor this lesson, a red, green and blue LED are best. Make sure you get a "5mm" or "3mm" LED, with two legs, as shown in the example image. "Ultrabright" LEDs (1000 mcd rating or higher) are preferred | Any electronics supply store |
-|![](images/resleft_t.gif) ![](images/rBrown_t.gif) ![](images/rBlack_t.gif) ![](images/rRed_t.gif) ![](images/spacer_t.gif) ![](images/rGold_t.gif) ![](images/resright_t.gif) | Three 1KΩ Resistors (brown black red gold) <brAny values from 300 Ω to 2KΩ are probably OK. | Any electronics supply store | $1 |
+|[![](images/usbcable.jpg)](images/10MHzcermosc.jpg) | USB Cable. <br> Standard A-B cable is required. Any length is OK. | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62) | Or any computer supply store | $5 |
+| ![](images/clear5mmled_t.jpg) | LEDs <br> For this lesson, a red, green and blue LED are best. Make sure you get a "5mm" or "3mm" LED, with two legs, as shown in the example image. "Ultrabright" LEDs (1000 mcd rating or higher) are preferred | Any electronics supply store |
+|![](images/resleft_t.gif) ![](images/rBrown_t.gif) ![](images/rBlack_t.gif) ![](images/rRed_t.gif) ![](images/spacer_t.gif) ![](images/rGold_t.gif) ![](images/resright_t.gif) | Three 1KΩ Resistors (brown black red gold) <br> Any values from 300 Ω to 2KΩ are probably OK. | Any electronics supply store | $1 |
 | ![](images/miniproto_t.jpg)| Arduino Prototyping Shield with tiny breadboard | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=51) + [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=18&products_id=65) | $15/$7.50
-| [![](images/breadboard-half.jpg)](images/breadboard-half.jpg) | Standard solderless breadboard <brIf you dont have a protoshield, this is a substitute | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=18&products_id=64) | $5 |
-| ![](images/100ftsolid_t.jpg) | Hookup Wire <brGet 22 gauge solid-core wire in red, black and some other color. Make sure its _not_ stranded wire! | Any hardware store | |
+| [![](images/breadboard-half.jpg)](images/breadboard-half.jpg) | Standard solderless breadboard <br>If you dont have a protoshield, this is a substitute | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=18&products_id=64) | $5 |
+| ![](images/100ftsolid_t.jpg) | Hookup Wire <br>Get 22 gauge solid-core wire in red, black and some other color. Make sure its _not_ stranded wire! | Any hardware store | |
 
 ## Say hello to the solderless breadboard!
 

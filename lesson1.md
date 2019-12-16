@@ -13,8 +13,9 @@ These instructions mostly show Windows software. Except when indicated, the soft
 Not much is needed for this lesson, just a USB cable and an Arduino. If you have an older Arduino you may also need an LED. Any LED is fine as long as it looks sorta like the photo, with a plastic bulb and two legs
 
 Make sure you've gone through [Lesson 0](https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0) first!
+
 |Image|Description|Supplier|Price|
-|-|-|-|-|
+|:-:|:-:|:-:|:-:|
 |![Arduino](images/diecimilla.jpg)| Assembled Arduino board, preferrably a Diecimila (or whatever the latest version is) | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |
 |[![USB Cable](images/usbcable.jpg)](images/10MHzcermosc.jpg)| USB Cable. Standard A-B cable is required. Any length is OK. | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62) <br> Or any computer supply store | $5
 |![5mm LED](images/clear5mmled_t.jpg) | LED - **Optional** <br> Nearly any LED is OK, as long as it has two wire legs. This part is only required for **NG rev c** Arduinos (and maybe other older ones). Diecimila Arduino's have this part 'built-in' |Any electronics supply store | $1 |
