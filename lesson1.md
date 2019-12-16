@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Ah yes, it is finally time to make your Arduino do something! We're going to start with the [classic **hello world!**](http://en.wikipedia.org/wiki/Hello_world) of electronics, a blinking light.
+Ah yes, it is finally time to make your Arduino do something! We're going to start with the [classic **hello world!**](https://en.wikipedia.org/wiki/Hello_world) of electronics, a blinking light.
 
 This lesson will basically get you up and running using the Arduino software and uploading a sketch to the Arduino board. Once you've completed this step we can continue to the really exciting stuff, which is when we start writing our own sketches!
 
@@ -12,18 +12,18 @@ These instructions mostly show Windows software. Except when indicated, the soft
 
 Not much is needed for this lesson, just a USB cable and an Arduino. If you have an older Arduino you may also need an LED. Any LED is fine as long as it looks sorta like the photo, with a plastic bulb and two legs
 
-Make sure you've gone through [Lesson 0](lesson0.html) first!
+Make sure you've gone through [Lesson 0](https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0) first!
 |Image|Description|Supplier|Price|
 |-|-|-|-|
-|[![](images/diecimilla.jpg)](images/attiny2313dip.jpg)| Assembled Arduino board, preferrably a Diecimila (or whatever the latest version is) | [Adafruit](http://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |
-|[![](images/usbcable.jpg)](images/10MHzcermosc.jpg)| USB Cable. Standard A-B cable is required. Any length is OK. | [Adafruit](http://www.adafruit.com/index.php?main_page=product_info&products_id=62) <br> Or any computer supply store | $5
-|![](images/clear5mmled_t.jpg) | LED - **Optional** <br> Nearly any LED is OK, as long as it has two wire legs. This part is only required for **NG rev c** Arduinos (and maybe other older ones). Diecimila Arduino's have this part 'built-in' |Any electronics supply store | $1 |
+|![Arduino](images/diecimilla.jpg)| Assembled Arduino board, preferrably a Diecimila (or whatever the latest version is) | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |
+|[![USB Cable](images/usbcable.jpg)](images/10MHzcermosc.jpg)| USB Cable. Standard A-B cable is required. Any length is OK. | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62) <br> Or any computer supply store | $5
+|![5mm LED](images/clear5mmled_t.jpg) | LED - **Optional** <br> Nearly any LED is OK, as long as it has two wire legs. This part is only required for **NG rev c** Arduinos (and maybe other older ones). Diecimila Arduino's have this part 'built-in' |Any electronics supply store | $1 |
 
 ## Download the Software
 
 The first thing to do is download the Arduino software.
 
-Go to the [Arduino Software Download page](http://www.arduino.cc/en/Main/Software) and grab the right file for your OS. As of Dec 2019 the version is **1.8.10** but you should use whatever is most recent.
+Go to the [Arduino Software Download page](https://www.arduino.cc/en/Main/Software) and grab the right file for your OS. As of Dec 2019 the version is **1.8.10** but you should use whatever is most recent.
 
 The packages are quite large, 30-50 MB so it may take a while to finish
 
@@ -33,10 +33,10 @@ The packages are quite large, 30-50 MB so it may take a while to finish
 
 Extract the package onto the Desktop
 
-![](images/winsoftextract.jpg)  
+![](images/winsoftextract.jpg)
 Windows
 
-![](images/macsoftextract.jpg)  
+![](images/macsoftextract.jpg)
 Mac OS X
 
 ![](images/winsoftfiles.jpg)
@@ -49,10 +49,10 @@ Mac OS X
 
 Double click the Arduino software icon
 
-![](images/arduinoicon.jpg)  
+![](images/arduinoicon.jpg)
 Windows
 
-![](images/macarduinoicon.jpg)  
+![](images/macarduinoicon.jpg)
 Mac OS X
 
 To open up the workspace
@@ -71,10 +71,10 @@ Click `Tools -> Board ->` and select the model of Arduino you will be using.
 
 Next, its time to configure the Serial Port (also known as the COM Port). Go back to [lesson 0](lesson0.html) to remind yourself of which port it is. On a PC it will probably be something like **COM3** or **COM4**. On a Mac it will be something like **tty.usbserial-xxxxx**
 
-![Windows port selection](images/winportselect.jpg)  
+![Windows port selection](images/winportselect.jpg)
 Windows port selection
 
-![Mac port selection](images/macselectport.jpg)  
+![Mac port selection](images/macselectport.jpg)
 Mac port selection
 
 This preference is saved so you only have to set it once, the program will remember next time it's run.
@@ -152,10 +152,10 @@ If you get the following error: can't open device "COM10": The system cannot fin
 
 ![](images/comporttoohigh.jpg)
 
-It means that you have too many COM ports (maybe you've got 9 Arduinos?) You should make sure that the port is numbered as low as possible. You can use a program like [FTClean](http://www.ftdichip.com/Resources/Utilities.htm) to clear out old COM ports you aren't using anymore. Once you've cleaned out the ports, you'll have to reinstall the driver again (see lesson 0).  
+It means that you have too many COM ports (maybe you've got 9 Arduinos?) You should make sure that the port is numbered as low as possible. You can use a program like [FTClean](https://www.ftdichip.com/Resources/Utilities.htm) to clear out old COM ports you aren't using anymore. Once you've cleaned out the ports, you'll have to reinstall the driver again (see lesson 0).
 Alternately, if you're sure that the ports are not used for something else but are left over from other USB devices, you can simply change the COM port using the **Device Manager**. Select the USB device in the Device Manager, right click and select **Properties**
 
-![](../../images/boarduino/portsettings.jpg)
+![](images/portsettings.jpg)
 
 Then click **Advanced**... and in the next window change the COM port to something like **COM4** or **COM5**. Don't forget to select the new port name in the Arduino software. The lower port names may say **(in use**) but as long as the other USB devices aren't plugged in, it shouldn't be a problem. This is a little riskier than just using FTClean...
 

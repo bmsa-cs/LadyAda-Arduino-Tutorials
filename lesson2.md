@@ -10,7 +10,7 @@ Then we will start hacking the sketch!
 
 ## Blinkie
 
-Start up the Arduino software and open the Blink example sketch, as you did in [Lesson 1.](lesson1.html)
+Start up the Arduino software and open the Blink example sketch, as you did in [Lesson 1](lesson1.md).
 
 The sketch itself is in the text input area of the Arduino software. Sketches are written in text, just like a document. When you select **Compile/Verify** from the menu, the Arduino software looks over the document and translates it to Arduino-machine-language - which is not human-readable but is easy for the Arduino to understand.
 
@@ -25,10 +25,10 @@ Sketches themselves are written in C, which is a programming language that is ve
  * depending on your Arduino board, it has either a built-in LED
  * or a built-in resistor so that you need only an LED.
  *
- * http://www.arduino.cc/en/Tutorial/Blink
+ * https://www.arduino.cc/en/Tutorial/Blink
  */
 
-int ledPin = 13;                // LED connected to digital pin 13 
+int ledPin = 13;                // LED connected to digital pin 13
 void setup()                    // run once, when the sketch starts
 {
   pinMode(ledPin, OUTPUT);      // sets the digital pin as output
@@ -56,11 +56,11 @@ Lets examine this sketch in detail starting with the first section:
  * depending on your Arduino board, it has either a built-in LED
  * or a built-in resistor so that you need only an LED.
  *
- * http://www.arduino.cc/en/Tutorial/Blink
+ * https://www.arduino.cc/en/Tutorial/Blink
  */
 ```
 
-This is a **comment**, it is text that is not used by the Arduino, its only there to help humans like us understand whats going on. You can tell if something is a comment because there is a **/*** at the beginning and a ***/** at the end. Anything between the /* and */ is ignored by the Arduino. In this example the person who wrote the comment decided to make it look pretty and add *'s down the side but this isn't necessary.  
+This is a **comment**, it is text that is not used by the Arduino, its only there to help humans like us understand whats going on. You can tell if something is a comment because there is a **/*** at the beginning and a ***/** at the end. Anything between the /* and */ is ignored by the Arduino. In this example the person who wrote the comment decided to make it look pretty and add *'s down the side but this isn't necessary.
 Comments are very useful and I strongly encourage every sketch you make have a comment in the beginning with information like who wrote it, when you wrote it and what its supposed to do.
 
 ## Variables
@@ -88,7 +88,7 @@ The fourth part is 13, a whole number (integer) which is assigned to `ledPin`.
 
 ## Procedures
 
-Lets move on to the next section  
+Lets move on to the next section
 
 ```c
 void setup()                    // run once, when the sketch starts
@@ -97,8 +97,8 @@ void setup()                    // run once, when the sketch starts
 }
 ```
 
-OK we've got two comments, each starting with //. We understand comments already so lets skip that.  
-We also see in the middle there is a statement, we know its a statement because it ends with a `;` (semicolon) however there's a whole bunch more stuff before and after it.  
+OK we've got two comments, each starting with //. We understand comments already so lets skip that.
+We also see in the middle there is a statement, we know its a statement because it ends with a `;` (semicolon) however there's a whole bunch more stuff before and after it.
 This bunch of code is an example of a **procedure**, a procedure is a collection of statements, its used to group statements together so that we can refer to them all with one name. Its just like a procedure that we use to perform a task step by step.
 
 |**returned value** | **procedure name** | (input values) | **{ statements }** |
@@ -149,19 +149,19 @@ Using our now well-honed technique we recognize that the text to the right is al
 
 We're going to skip the first statement for now and go straight to statement #2.
 
-The second and fourth statements are the same, and have something to do with a **delay**. This statement is very similar to the "wait 3 minutes." command in our cat-washing procedure. This statement says "Dear Arduino. Stop what you're doing for a short amount of time. Thanks!"  
+The second and fourth statements are the same, and have something to do with a **delay**. This statement is very similar to the "wait 3 minutes." command in our cat-washing procedure. This statement says "Dear Arduino. Stop what you're doing for a short amount of time. Thanks!"
 To do this, the statement performs a _procedure call_. (We will use the phrasing _calls a procedure_). Basically, we want the Arduino to take a break but don't quite know how to do it, lucky for us, someone else wrote a procedure called **delay** which we can _call upon_ to do the work for us. Kind of like if we need to do our taxes and we dont know how, we call upon an accountant to do it for us, giving them the paperwork input and getting tax return as the result.
 
 |**procedure name** | (input values)| **;** |
 |:-:|:-:|:-:|
 | delay | (1000) | ; |
 
-This means that somewhere out there, there's a procedure something like this:  
+This means that somewhere out there, there's a procedure something like this:
 
 ```pseudocode
-void delay(number of milliseconds)  
+void delay(number of milliseconds)
 {
-  "Dear Arduino. Stop what you're doing for **(number of milliseconds)** amount of time. Thanks!" 
+  "Dear Arduino. Stop what you're doing for **(number of milliseconds)** amount of time. Thanks!"
 }
 ```
 
@@ -231,7 +231,7 @@ Intense strobe action!
 
 <span style="color:white;">The light is no longer blinking</span>
 
-**Now pick up the Arduino and gently wave it back and forth, in a dark room. What happens?**  
+**Now pick up the Arduino and gently wave it back and forth, in a dark room. What happens?**
 
 <span style="color:white;">The LED creates a dashed trail of light in the air.</span>
 
