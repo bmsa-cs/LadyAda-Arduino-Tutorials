@@ -28,39 +28,47 @@ Go to the [Arduino Software Download page](https://www.arduino.cc/en/Main/Softwa
 
 The packages are quite large, 30-50 MB so it may take a while to finish
 
-![](images/downloadsoft.jpg)
-
 ## Unpack and Install
 
-Extract the package onto the Desktop
+### Windows
 
-![Windows Extract](images/winsoftextract.jpg)
+Run the installer.
 
-Windows
+![Choose the components to install.](images/installation/DRV_Capture1.png)
 
-![Mac OS X Extract](images/macsoftextract.jpg)
+Image by Arduino.cc
 
-Mac OS X
+Choose the components to install.
 
-![Windows files](images/winsoftfiles.jpg)
+![Choose the installation directory](images/installation/DRV_Capture2.png)
 
-Windows
+Image by Arduino.cc
 
-![Mac OS X pkg](images/macosarduinopkg.jpg)
+Choose the installation directory.
 
-Mac OS X
+![Installing the Arduino IDE](images/installation/DRV_Capture3.png)
+
+Image by Arduino.cc
+
+The process will extract and install all the required files to execute properly the Arduino Software (IDE).
+
+### Mac OS X
+
+![Arduino app download](images/installation/Mac_Download.jpg)
+
+_Image by Arduino.cc._
+
+Copy the Arduino application into the Applications folder (or elsewhere on your computer).
+
+![Arduino app copied to Applications](images/installation/MAC_App.jpg)
+
+_Image by Arduino.cc._
 
 ## Startup!
 
 Double click the Arduino software icon
 
-![Windows icon](images/arduinoicon.jpg)
-
-Windows
-
-![Mac OS X icon](images/macarduinoicon.jpg)
-
-Mac OS X
+![Arduino icon](images/arduino_icon.png)
 
 To open up the workspace
 
@@ -73,15 +81,17 @@ I think I get the red error text shown because I already have Arduino installed.
 The first step is to configure the Arduino software for the correct board.
 Click `Tools -> Board ->` and select the model of Arduino you will be using.
 
-<!-- TODO: Add screenshot. -->
+![Arduino board selection](images/UNO_BoardType.jpg)
+
+_Image by Arduino.cc._
 
 ## Select port
 
 Next, its time to configure the Serial Port (also known as the COM Port). Go back to [lesson 0](lesson0.html) to remind yourself of which port it is. On a PC it will probably be something like **COM3** or **COM4**. On a Mac it will be something like **tty.usbserial-xxxxx**
 
-![Windows port selection](images/winportselect.jpg)
+![Windows port selection](images/UNO_Port.jpg)
 
-Windows port selection
+Windows port selection. _Image by Arduino.cc._
 
 ![Mac port selection](images/macselectport.jpg)
 
@@ -95,28 +105,28 @@ However, if you have multiple Arduino's, they may be assigned difference COM por
 
 **Sketches** are little scripts that you can send to the Arduino to tell it how to act. Let's open up an **Example Sketch**. Go to the `File menu -> Examples -> 01.Basics -> Blink`
 
-<!-- TODO: Update screenshots with new location of Blink. -->
-![](images/winblinkopen.jpg)
+![Load blink](images/UNO_Load_blink.jpg)
+_Image by Arduino.cc._
 
 The window should now look like this, with a bunch of text in the formerly empty white space and the tab **Blink** above it
 
-![](images/winblinkopened.jpg)
+![Blink sketch opened](images/winblinkopened.jpg)
 
 ## Verify / Compile
 
 The first step to getting a **Sketch** ready for transfer over to the arduino is to **Verify/Compile** it. That means check it over for mistakes (sort of like editing) and then translate it into an application that is compatible with the Arduino hardware.
 
-![](images/winverifyblink.jpg)
+![Verifying sketch](images/winverifyblink.jpg)
 
 After a few seconds, you should see the message **Done compiling.** in the **Status Bar** and **Binary Sketch Size:** in the **Notification area.** This means the sketch was well-written and is ready for uploading to the Arduino board!
 
-![](images/winblinkcompiled.jpg)
+![Sketch compiled.](images/winblinkcompiled.jpg)
 
 ### Reset (NG only)
 
 To tell the Arduino that it should prepare itself for a new Sketch upload, you must reset the board. Diecimila Arduino's have built-in auto-reset capability, so you don't need to do anything. Older Arduinos, such as NG, must be manually reset before uploading a sketch. To do that simply press the black button on the right hand side of the board, shown here.
 
-[![](images/ngresetbutton_t.jpg)](images/ngresetbutton.jpg)
+[![Reset NG](images/ngresetbutton_t.jpg)](images/ngresetbutton.jpg)
 
 ## Upload
 
@@ -124,19 +134,18 @@ Now it's time to upload. Make sure the Arduino is plugged in, the green light is
 
 If you have an NG Arduino, press the **Reset Button** now, just before you select the **Upload** menu item.
 
-Select **Upload** from the **Sketch menu**
+Select the **Upload** button.
+**![Select the **Upload** button.](images/UNO_Upload.png)**
 
-<!-- TODO: Update upload screenshot. -->
-
-**![](images/winupload.jpg)**
+_Image by Arduino.cc._
 
 After a few seconds you should get this screen, with the message **Done uploading.** in the status bar.
 
-![](images/windoneupload.jpg)
+![Done uploading](images/windoneupload.jpg)
 
 If you get the following error message "**avrdude: stk500_getsync(): not in sync: resp=0x00"** that means that the Arduino is not responding
 
-![](images/winuploadtimeout.jpg)
+![Uploading timeout error](images/winuploadtimeout.jpg)
 
 Then check the following:
 
@@ -148,26 +157,28 @@ Then check the following:
 
 If you get the following error message:
 
-![](images/setdtrnullptr.jpg)
+![NullPointerException](images/setdtrnullptr.jpg)
 
 It means you dont have a serial port selected, go back and verify that the correct driver is installed ([lesson 0](lesson0.html))and that you have the correct serial port selected in the menu.
 
 If you get the following error **Expected signature for ATMEGA**
 
-![](images/wrongsigupload.jpg)
+![Wrong signature](images/wrongsigupload.jpg)
 
 Then you have either the incorrect chip selected in the **Tools** menu or the wrong bootloader burned onto the chip
 
 If you get the following error: can't open device "COM10": The system cannot find the file specified (under Windows, COM port value may vary)
 
-![](images/comporttoohigh.jpg)
+![COM Port too high](images/comporttoohigh.jpg)
 
 It means that you have too many COM ports (maybe you've got 9 Arduinos?) You should make sure that the port is numbered as low as possible. You can use a program like [FTClean](https://www.ftdichip.com/Resources/Utilities.htm) to clear out old COM ports you aren't using anymore. Once you've cleaned out the ports, you'll have to reinstall the driver again (see lesson 0).
 Alternately, if you're sure that the ports are not used for something else but are left over from other USB devices, you can simply change the COM port using the **Device Manager**. Select the USB device in the Device Manager, right click and select **Properties**
 
-![](images/portsettings.jpg)
+![Port Settings](images/portsettings.jpg)
 
 Then click **Advanced**... and in the next window change the COM port to something like **COM4** or **COM5**. Don't forget to select the new port name in the Arduino software. The lower port names may say **(in use**) but as long as the other USB devices aren't plugged in, it shouldn't be a problem. This is a little riskier than just using FTClean...
+
+[Additional troubleshooting steps at Arduino.cc](https://www.arduino.cc/en/Guide/Troubleshooting)
 
 ## Insert LED (NG Arduinos)
 
@@ -175,15 +186,15 @@ Some older Arduinos don't have a built in LED, its easy to tell if yours does or
 
 If you have a Diecimila or other Arduino with a built in LED you will see a translucent part as shown
 
-![](images/diecledplaced.jpg)
+![Built-in LED](images/diecledplaced.jpg)
 
 If you have an NG rev C or other Arduino without an LED, the translucent part will not be there, and instead you will see two silver dots
 
-![](images/ngledplace.jpg)
+![NG LED place](images/ngledplace.jpg)
 
 If you don't have an LED, you'll need to add your own. Any LED will do, as long as it has two legs and kinda looks like the one shown here. LEDs are **directional** components. That means if you put it in backwards it will not work! To help you put the LED in right, the LED factory cuts the legs at different lengths. The longer leg goes in the hole marked **13** and the shorter one goes in the hole marked **GND**
 
-[![](images/ngled_t.jpg)](images/ngled.jpg)
+[![Connecting an LED to pin 13](images/ngled_t.jpg)](images/ngled.jpg)
 
 ## Watch!
 
