@@ -34,30 +34,37 @@ The packages are quite large, 30-50 MB so it may take a while to finish
 
 Extract the package onto the Desktop
 
-![](images/winsoftextract.jpg)
+![Windows Extract](images/winsoftextract.jpg)
+
 Windows
 
-![](images/macsoftextract.jpg)
+![Mac OS X Extract](images/macsoftextract.jpg)
+
 Mac OS X
 
-![](images/winsoftfiles.jpg)
+![Windows files](images/winsoftfiles.jpg)
+
 Windows
 
-![](images/macosarduinopkg.jpg)
+![Mac OS X pkg](images/macosarduinopkg.jpg)
+
 Mac OS X
 
 ## Startup!
 
 Double click the Arduino software icon
 
-![](images/arduinoicon.jpg)
+![Windows icon](images/arduinoicon.jpg)
+
 Windows
 
-![](images/macarduinoicon.jpg)
+![Mac OS X icon](images/macarduinoicon.jpg)
+
 Mac OS X
 
 To open up the workspace
-![](images/winworkspacestart.jpg)
+
+![Workspace](images/winworkspacestart.jpg)
 
 I think I get the red error text shown because I already have Arduino installed. Either way, it isn't a problem if you do or don't see it.
 
@@ -73,9 +80,11 @@ Click `Tools -> Board ->` and select the model of Arduino you will be using.
 Next, its time to configure the Serial Port (also known as the COM Port). Go back to [lesson 0](lesson0.html) to remind yourself of which port it is. On a PC it will probably be something like **COM3** or **COM4**. On a Mac it will be something like **tty.usbserial-xxxxx**
 
 ![Windows port selection](images/winportselect.jpg)
+
 Windows port selection
 
 ![Mac port selection](images/macselectport.jpg)
+
 Mac port selection
 
 This preference is saved so you only have to set it once, the program will remember next time it's run.

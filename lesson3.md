@@ -59,6 +59,7 @@ Now is a good time to practice making jumpers, go forth and make a few 3" long j
 The resistor is the most basic and also most common electronic part. An electronic gadget, such as an mp3 player has easily a _thousand_ resistors inside of it!
 
 ![](images/22K.jpg)
+
 _Behold...a resistor!_
 
 Resistors have one job to do, and that is to _resist_ the flow of electricity (otherwise known as **current**). That's why they're called resistors. By resisting current they control where and how fast it flows.
@@ -105,6 +106,7 @@ We've had some time with the LED already, but lets get to know her a little bett
 If you recall from [lesson 1](lesson1.md), Arduino NG users had to make sure that they inserted the LED in the right way. If you place the LED in backwards it won't work. Diecimila Arduino users already have the LED (a very very small one) soldered onto the circuit board the right way.
 
 ![](images/diecledplaced.jpg)
+
 _Look again! Its a tiny LED_
 
 As we mentioned before, its easy to figure out which side of an LED is positive and which one is negative. The positive leg is slightly longer and if you look inside, the chunk of metal is larger on the negaive side.
@@ -151,11 +153,13 @@ Lets say you want to "save" this design and send it to a friend to check out and
 Each electronic component has a schematic symbol, which is a simplified drawing of the part. For resistors the symbol looks like this:
 
 ![](images/resistorsymbol.jpg)
+
 _Resistor symbol_
 
 And the symbol for LED's look like this:
 
 ![](images/ledsymbol.jpg)
+
 _LED symbol, positive pin on the left, negative pin on the right_
 
 You can see that the resistor symbol is symmetric, just like resistors themselves. The LED symbol, however, has an arrow thing going on. This is the direction in which current flows. The little arrows that are coming out of the symbol indicate that this is a diode that emits light.
@@ -163,16 +167,19 @@ You can see that the resistor symbol is symmetric, just like resistors themselve
 Power and ground also have symbols:
 
 ![](images/powergndsym.jpg)
+
 _Power and Ground symbols_
 
 The only thing we need to do now is indicate how the LED and resistor are hooked up and show the 5V and ground connections.
 
 ![](images/lesson3sch1.jpg)
+
 _A barebones schematic_
 
 Next to symbols, we often write important information like what the resistor value is, what color and size the LED should be, and the voltage associated with the power supply.
 
 ![](images/lesson3sch2.jpg)
+
 _A well documented schematic!_
 
 For practice, try drawing your own schematic on a piece of paper.
@@ -262,6 +269,7 @@ Re-compile and verify the sketch, then send it over the the Arduino. The LED sho
 OK sure you've had plenty of practice messing around with LEDs. It's time to go full color! Find a red, green and blue LED. If you have the Arduino Starter Pack they will be the three clear LEDs. You can't tell which one is which until they are lit so just build the circuit and then rearrange them if needed.
 
 ![](images/lesson3sch7.jpg)
+
 _Red, green and blue LED schematic_
 
 In this schematic we will have three LEDs connected to three different pins: #10, #11 and #12.
@@ -383,7 +391,8 @@ Compile and verify your code. Does it work? If not use your debugging skills to 
 
 Now that you have red, green and blue light, you can start having fun with _color mixing_. Color mixing is the neat ability that our eyes have to combine different light colors and create a new color
 
-![](images/AdditiveColorMixing.png)
+![A additive (light) color mixing diagram](images/AdditiveColorMixing.png)
+
 _A additive (light) color mixing diagram_
 
 According to this diagram, if we have both red and blue light mixed together we should get a violet light.
