@@ -6,46 +6,45 @@ We've done a lot so far, blinking lights, printing messages...all of that stuff 
 
 ## What you'll need:
 
-|Image|Item|Purchase|Price|
-|:---:|:--:|:------:|:---:|
-| ![](images/diecimilla.jpg) |Assembled Arduino board, preferrably a Diecimila (or whatever the latest version is) but NG is OK too|[Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50)|$35|
-| ![](images/usbcable.jpg) |USB Cable. Standard A-B cable is required. Any length is OK.|[Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62) <br> Or any computer supply store |$5|
-| ![](images/3mmredled_t.jpg)|5 Red LEDs <br> The brighter the better|Any electronics supply store | $3|
-| ![](images/6mmswitch_t.jpg) |6mm tact switch (pushbutton)| Any electronics supply store | $0.50|
-| ![](images/resleft_t.gif) ![](images/rBrown_t.gif) ![](images/rBlack_t.gif) ![](images/rBrown_t.gif) ![](images/spacer_t.gif) ![](images/rGold_t.gif) ![](images/resright_t.gif) | One 100 Ω Resistor (brown black brown gold) <br> Any values from 20 Ω to 220 Ω is probably OK.| Any electronics supply store | $1|
-|![](images/resleft_t.gif) ![](images/rBrown_t.gif) ![](images/rBlack_t.gif) ![](images/rRed_t.gif) ![](images/spacer_t.gif) ![](images/rGold_t.gif) ![](images/resright_t.gif)|Five 1KΩ Resistors (brown black red gold) <br> Any values from 300 Ω to 2KΩ are probably OK.|Any electronics supply store | $1|
-|![](images/resleft_t.gif) ![](images/rBrown_t.gif) ![](images/rBlack_t.gif) ![](images/rOrange_t.gif) ![](images/spacer_t.gif) ![](images/rGold_t.gif) ![](images/resright_t.gif)|One 10KΩ Resistors (brown black orange gold) <br> Any value from 5KΩ to 100KΩ is probably OK.|Any electronics supply store | $1|
-| ![](images/miniproto_t.jpg) |Arduino Prototyping Shield with tiny breadboard|[Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=51) or [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=18&products_id=65) | $15 /  $7.50|
-| ![](images/100ftsolid_t.jpg) |Hookup Wire <br> Get 22 gauge solid-core wire in red, black and some other color. Make sure its not stranded wire!| Any hardware store| |
+| Image | Item | Purchase | Price |
+| :---: | :---: | :---: | :---: |
+| ![](.gitbook/assets/diecimilla%20%281%29.jpg) | Assembled Arduino board, preferrably a Diecimila \(or whatever the latest version is\) but NG is OK too | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |
+| ![](.gitbook/assets/usbcable%20%281%29.jpg) | USB Cable. Standard A-B cable is required. Any length is OK. | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62)   Or any computer supply store | $5 |
+| ![](.gitbook/assets/3mmredled_t.jpg) | 5 Red LEDs   The brighter the better | Any electronics supply store | $3 |
+| ![](.gitbook/assets/6mmswitch_t.jpg) | 6mm tact switch \(pushbutton\) | Any electronics supply store | $0.50 |
+| ![](.gitbook/assets/resleft_t%20%284%29.gif) ![](.gitbook/assets/rbrown_t%20%283%29.gif) ![](.gitbook/assets/rblack_t%20%281%29.gif) ![](.gitbook/assets/rbrown_t%20%281%29.gif) ![](.gitbook/assets/spacer_t%20%281%29.gif) ![](.gitbook/assets/rgold_t%20%284%29.gif) ![](.gitbook/assets/resright_t.gif) | One 100 Ω Resistor \(brown black brown gold\)   Any values from 20 Ω to 220 Ω is probably OK. | Any electronics supply store | $1 |
+| ![](.gitbook/assets/resleft_t%20%282%29.gif) ![](.gitbook/assets/rbrown_t%20%282%29.gif) ![](.gitbook/assets/rblack_t%20%283%29.gif) ![](.gitbook/assets/rred_t%20%282%29.gif) ![](.gitbook/assets/spacer_t.gif) ![](.gitbook/assets/rgold_t%20%281%29.gif) ![](.gitbook/assets/resright_t%20%284%29.gif) | Five 1KΩ Resistors \(brown black red gold\)   Any values from 300 Ω to 2KΩ are probably OK. | Any electronics supply store | $1 |
+| ![](.gitbook/assets/resleft_t.gif) ![](.gitbook/assets/rbrown_t%20%284%29.gif) ![](.gitbook/assets/rblack_t%20%282%29.gif) ![](.gitbook/assets/rorange_t.gif) ![](.gitbook/assets/spacer_t%20%284%29.gif) ![](.gitbook/assets/rgold_t.gif) ![](.gitbook/assets/resright_t%20%281%29.gif) | One 10KΩ Resistors \(brown black orange gold\)   Any value from 5KΩ to 100KΩ is probably OK. | Any electronics supply store | $1 |
+| ![](.gitbook/assets/miniproto_t%20%281%29.jpg) | Arduino Prototyping Shield with tiny breadboard | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=51) or [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=18&products_id=65) | $15 /  $7.50 |
+| ![](.gitbook/assets/100ftsolid_t%20%281%29.jpg) | Hookup Wire   Get 22 gauge solid-core wire in red, black and some other color. Make sure its not stranded wire! | Any hardware store |  |
 
 ## What's a switch?
 
 You're probably familiar with switches, there's tons of them in your house. One kind of switch you use every day is a light switch. A light switch is a simple device with two positions, on and off. When on, two wires are connected inside, which allows current to flow. When off, the two wires are disconnected.
 
-![](images/lightswitch.gif)
+![](.gitbook/assets/lightswitch.gif)
 
 On the left, the switch is **open** and no current flows. On the right, the switch is **closed**, current flows and the light turns on.
 
-![](images/Light_switch_inside.jpg)
-(thanks wikipedia!)
+![](.gitbook/assets/light_switch_inside.jpg) \(thanks wikipedia!\)
 
 In this photo, you can see the internals of a light switch. The two wires connect to the top and bottom. The flat bar that goes verically down the middle is what is physically moved to connect or disconnect.
 
 Light switches are great but we need something smaller. We'll be primarily using 6mm tactile button switches.
 
-![](images/6mmswitch_t.jpg)
+![](.gitbook/assets/6mmswitch_t%20%281%29.jpg)
 
 These little switches are a 1/4" on each side, cost about 25 cents, and can plug directly into a breadboard. These mechanical devices have 4 legs, which may make you think that there are 4 wires that are switched on and off, but in fact, two on each side are actually connected together inside. So really, this switch is just a 2-wire switch.
 
-![](images/buttonlegsdiag.jpg)
+![](.gitbook/assets/buttonlegsdiag.jpg)
 
-Normally, the two wires are disconnected (**normally open)** but when you press the little button on top, they are mechanically connected.
+Normally, the two wires are disconnected \(**normally open\)** but when you press the little button on top, they are mechanically connected.
 
-![](images/pushbuttons.gif)
+![](.gitbook/assets/pushbuttons.gif)
 
-![](images/buttonlegs.jpg)
+![](.gitbook/assets/buttonlegs.jpg)
 
-To get the buttons to sit better in the protoshield, you may want to straighten out the legs (just squish them with a pair of pliers) so that they look like the button on the left.
+To get the buttons to sit better in the protoshield, you may want to straighten out the legs \(just squish them with a pair of pliers\) so that they look like the button on the left.
 
 ### Quick Quiz!
 
@@ -55,17 +54,15 @@ To get the buttons to sit better in the protoshield, you may want to straighten 
 
 We're going to make our first test of the pushbutton by having it turn on and off an LED light
 
-![](images/switch1.png)
-_Fig 5.1 You'll note that the schematic symbol for a pushbutton switch is a little bit different than the one above_
+![](.gitbook/assets/switch1.png) _Fig 5.1 You'll note that the schematic symbol for a pushbutton switch is a little bit different than the one above_
 
 Get out your red LED and 1.0KΩ resistor, as well as the tiny pushbutton and build the schematic onto your protoshield:
 
-[![](images/buttonwired1_t.jpg)](images/buttonwired1.jpg)
-[![](images/buttonlegsright_t.jpg)](images/buttonlegsright.jpg)
+[![](.gitbook/assets/buttonwired1_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/buttonwired1.jpg) [![](.gitbook/assets/buttonlegsright_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/buttonlegsright.jpg)
 
-Power up the Arduino and try pressing the button. The LED should light up when the button is held down (current is able to flow) and go dark when it's released (current is not able to flow).
+Power up the Arduino and try pressing the button. The LED should light up when the button is held down \(current is able to flow\) and go dark when it's released \(current is not able to flow\).
 
-[![](images/buttonpress1_t.jpg)](images/buttonpress1.jpg)
+[![](.gitbook/assets/buttonpress1_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/buttonpress1.jpg)
 
 > **Switch capability**
 >
@@ -73,8 +70,10 @@ Power up the Arduino and try pressing the button. The LED should light up when t
 
 ### Quick Quiz!
 
-* **What does this wiring setup do? (The LED is connected to ground, but its kind of hidden in this photo) Make a guess and then build it and test your guess.**
-    [![](images/miswire_t.jpg)](images/miswire.jpg)
+* **What does this wiring setup do? \(The LED is connected to ground, but its kind of hidden in this photo\) Make a guess and then build it and test your guess.**
+
+    [![](.gitbook/assets/miswire_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/miswire.jpg)
+
 * The switch is oriented so that the LED is always on!
 
 These switches have the part number **B3F-1000**, [here is a datasheet webpage for the part](https:////www.adafruit.com/datasheets/B3F-1000-Omron.pdf). There's a lot of information, but learning how to navigate these sorts of pages is rather important. Use your detective skills to figure out the follwing:
@@ -83,14 +82,14 @@ These switches have the part number **B3F-1000**, [here is a datasheet webpage f
   * 50 mA
 * **What is the maximum voltage you can use this switch for?**
   * 24V
-* **What is the recommended Operating Force (how hard the button is pressed) for the B3F-1000?**
-  * 0.98 Newtons (100 gf)
+* **What is the recommended Operating Force \(how hard the button is pressed\) for the B3F-1000?**
+  * 0.98 Newtons \(100 gf\)
 
 ## DigitalRead
 
 Switches are great for controlling current, as shown by our little light switch demo. But they're even better as input devices!
 
-In previous lessons we set a pin on the microcontroller (say **pin 13**) to `HIGH` (5V) or `LOW` (ground, 0V) using the **DigitalWrite** procedure. Now we get to do the opposite. We will set the voltage on a pin to 5V or ground and then use `DigitalRead` to inquire whether that pin is `HIGH` or `LOW`
+In previous lessons we set a pin on the microcontroller \(say **pin 13**\) to `HIGH` \(5V\) or `LOW` \(ground, 0V\) using the **DigitalWrite** procedure. Now we get to do the opposite. We will set the voltage on a pin to 5V or ground and then use `DigitalRead` to inquire whether that pin is `HIGH` or `LOW`
 
 For our first test, we will use a wire as our switch. Turn on the Arduino and run this little sketch
 
@@ -116,13 +115,13 @@ For our first test, we will use a wire as our switch. Turn on the Arduino and ru
 
 You'll note that we have to tell the Arduino to set the pin as an input. This is pretty easy, use `pinMode()` but use `INPUT` instead of `OUTPUT`
 
-`pinMode(switchPin, INPUT);    // sets the digital pin as input to read switch`
+`pinMode(switchPin, INPUT); // sets the digital pin as input to read switch`
 
 We also use the new `digitalRead()` procedure, which just takes as an input the pin to examine.
 
-`Serial.println(digitalRead(switchPin));    // Read the pin and display the value`
+`Serial.println(digitalRead(switchPin)); // Read the pin and display the value`
 
-The `digitalRead()` procedure **returns a result** when its done. That result is either 0 (`LOW`) or 1 (`HIGH`) depending on what it saw when it looked at the pin's voltage. In this case, we read the pin and then **pass the result** as an input to _another_ procedure, `println()`. Sure we could use a variable to hold the result from `digitalRead()` and then use that variable as input to `println()` but this is much more succinct.
+The `digitalRead()` procedure **returns a result** when its done. That result is either 0 \(`LOW`\) or 1 \(`HIGH`\) depending on what it saw when it looked at the pin's voltage. In this case, we read the pin and then **pass the result** as an input to _another_ procedure, `println()`. Sure we could use a variable to hold the result from `digitalRead()` and then use that variable as input to `println()` but this is much more succinct.
 
 ```c
 var = digitalRead(switchPin);      // read the pin and save it into var
@@ -131,134 +130,119 @@ Serial.println(var);               // print out the value stored in var
 
 Now use a wire to alternate between connecting **Pin 2** to 5V and Ground through a 100Ω resistor, and watch the serial monitor.
 
-![](images/basicswitch.png)
-_Fig 5.2_
+![](.gitbook/assets/basicswitch.png) _Fig 5.2_
 
-_[![](images/tiehigh_t.jpg)](images/tiehigh.jpg)
-Switch input tied `HIGH` (5v)_
+[![](.gitbook/assets/tiehigh_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/tiehigh.jpg) _Switch input tied `HIGH` \(5v\)_
 
-_
-[![](images/tielow_t.jpg)](images/tielow.jpg)
-Switch input tied LOW (ground)_
+ __[![](.gitbook/assets/tielow_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/tielow.jpg) _Switch input tied LOW \(ground\)_
 
-You should see it print out two messages depending on whether a the wire jumper connects the input to `HIGH` (5V) or LOW (ground) voltage. Dont forget, in digital binary land, `HIGH` is another word for 1 and LOW is another word for 0\.
+You should see it print out two messages depending on whether a the wire jumper connects the input to `HIGH` \(5V\) or LOW \(ground\) voltage. Dont forget, in digital binary land, `HIGH` is another word for 1 and LOW is another word for 0.
 
-![](images/switchreadout.jpg)
+![](.gitbook/assets/switchreadout.jpg)
 
 > **Valid inputs**
 >
 > The best way to completely destroy a microcontroller such as an Arduino is to feed it voltages that are much too high. Make sure your input voltages are between 0 and 5V! **Never connect a 9V battery directly into an input pin, it will fry the pin for good and possibly destroy the Arduino microcontroller!**
 >
-> **Whats this 100Ω resistor all about?**
-> There's a 100Ω resistor we use to connect the input pin to either `HIGH` or LOW voltage. Why is it there? Well, lets say you accidentally set `P2` to be an `OUTPUT` type pin, but then you connected it to 5V. If you write a LOW to the pin (0V) but its connected to `HIGH` (5V), you've basically caused a short circuit at that pin. This isn't very good for the pin and could damage it! The 100Ω resistor acts as a buffer, to protect the pin from short circuits.
+> **Whats this 100Ω resistor all about?** There's a 100Ω resistor we use to connect the input pin to either `HIGH` or LOW voltage. Why is it there? Well, lets say you accidentally set `P2` to be an `OUTPUT` type pin, but then you connected it to 5V. If you write a LOW to the pin \(0V\) but its connected to `HIGH` \(5V\), you've basically caused a short circuit at that pin. This isn't very good for the pin and could damage it! The 100Ω resistor acts as a buffer, to protect the pin from short circuits.
 
 ## Floating high above the clouds
 
 Of course, connecting and disconnecting a wire is a lot of work, and we'd like to replace that with a mechanical switch. Only thing is, our switch can only connect and disconnect two wires, it can't alternate connections.
 
-![](images/nopulldown.png)
+![](.gitbook/assets/nopulldown.png)
 
-![](images/nopullup.png)
-_Fig 5.3 Our two alternative switch wiring possibilities_
+![](.gitbook/assets/nopullup.png) _Fig 5.3 Our two alternative switch wiring possibilities_
 
 For example, in these schematics we can connect and disconnect **pin 2** to 5V, or we can connect and disconnect **pin 2** to ground. In both cases, as long as the button is held down, the pin is connected to a **valid input** voltage. When the button is released, though, **pin 2** is not connected to _anything_. This is called a **floating input** voltage. Basically, it's invalid input!
 
 Try building up one of these schematics, and trying out the switch testing sketch above. When the button is held down you should definately get the right printout. When its released, it may keep the old value, or it may change, but its certainly not reliable!
 
-[![](images/testswitchnopulldown_t.jpg)](images/testswitchnopulldown.jpg)
-_Wiring when the switch is connected to 5V_
+[![](.gitbook/assets/testswitchnopulldown_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/testswitchnopulldown.jpg) _Wiring when the switch is connected to 5V_
 
-[![](images/testswitchnopullup_t.jpg)](images/testswitchnopullup.jpg)
-_Wiring when switch is connected to ground_
+[![](.gitbook/assets/testswitchnopullup_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/testswitchnopullup.jpg) _Wiring when switch is connected to ground_
 
 One solution is to get a switch that alternates connections, like this one, diagrammed here.
 
-![](images/simplespdt.png)
-_Fig 5.4_
+![](.gitbook/assets/simplespdt.png) _Fig 5.4_
 
 The problem is, these switches are suprisingly complex and 10 times more expensive than a little tactile button! Instead we use a trick called a **pull-down** resistor.
 
-![](images/pulldown.png)
-_Fig 5.5_
+![](.gitbook/assets/pulldown.png) _Fig 5.5_
 
 The pull-down resistor here is the 10K resistor. When the switch is held down, the 100Ω resistor is connected directly to 5V. When the switch is released, the 100Ω resistor is connected to the 10K resistor which **pulls it down** to ground.
 
-Here's how to think of it: When you press the button and connect the 100Ω resistor to 5V, the button has a very small resistance (less than 1 Ω!), so it provides a **strong** pull to 5V.
-The 10KΩ resistor is also connecting the 100Ω resistor to ground, but since the 10KΩ resistor has 10000 times more resistance than the button, its a very **weak** pull to ground and can't compete. The strong 5V connection overpowers the weak ground connection and the input pin reads `HIGH`.
+Here's how to think of it: When you press the button and connect the 100Ω resistor to 5V, the button has a very small resistance \(less than 1 Ω!\), so it provides a **strong** pull to 5V. The 10KΩ resistor is also connecting the 100Ω resistor to ground, but since the 10KΩ resistor has 10000 times more resistance than the button, its a very **weak** pull to ground and can't compete. The strong 5V connection overpowers the weak ground connection and the input pin reads `HIGH`.
 
 However, when the switch is disconnected, there is no longer a strong pull to 5V. In fact, its let go completely. But there is still weak pull to ground. Despite being a weak connection, it's better than nothing and so the resistor pulls the input pin to `LOW`.
 
 Build this circuit and try it out with the switch test sketch. It should be very reliable now! If its not working, make sure you have the right resistor values and that the parts are connected up properly.
 
-[![](images/testswitchpulldown_t.jpg)](images/testswitchpulldown.jpg)
+[![](.gitbook/assets/testswitchpulldown_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/testswitchpulldown.jpg)
 
 You can also use the switch to connect the input to ground, and use a resistor as a **pull-up** resistor.
 
-![](images/pullup.png)
-_Fig 5.6_
+![](.gitbook/assets/pullup.png) _Fig 5.6_
 
 Try this schematic as well, and verify for yourself that the button is now reliable.
 
 Note that the strong and weak connections have nothing to do with whether the switch is configured as a pull-up or pull down. The strength of the connection comes from the fact that the button is very low resistance when held down and that the resistor is much much more resistive to current flow than the button.
 
-[![](images/testswitchpullup_t.jpg)](images/testswitchpullup.jpg)
+[![](.gitbook/assets/testswitchpullup_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/testswitchpullup.jpg)
 
 > Must a pullup/down resistor be 10KΩ?
 >
-> You'll notice that both the Arduino schematic, and the examples here use a 10KΩ resistor as the pullup or pulldown. Is there something special about 10KΩ? Nope! While, it is pretty much univerally used as the 'default' value, most of the time you can use as high as 100KΩ or as low as 4.7KΩ. Going much lower will waste more power, going higher may give you unstable results (due to microcontroller-internals that are not that important right now).
-> I suggest going with 10KΩ because they are common resistor values and people reading your schematic will be more likely to understand that its 'just a pullup resistor'.
+> You'll notice that both the Arduino schematic, and the examples here use a 10KΩ resistor as the pullup or pulldown. Is there something special about 10KΩ? Nope! While, it is pretty much univerally used as the 'default' value, most of the time you can use as high as 100KΩ or as low as 4.7KΩ. Going much lower will waste more power, going higher may give you unstable results \(due to microcontroller-internals that are not that important right now\). I suggest going with 10KΩ because they are common resistor values and people reading your schematic will be more likely to understand that its 'just a pullup resistor'.
 
 ### Quick Quiz!
 
-* **With the pull-down resistor configuration, what is the value read by digitalRead() when the button is pressed?**
-  * The returned value is 1 (`HIGH`)
-* **With the pull-down resistor configuration, what is the value read by digitalRead() when the button is released?**
-  * The returned value is 0 (LOW)
-* **With the pull-up resistor configuration, what is the value read by digitalRead() when the button is pressed?**
-  * The returned value is 0 (LOW)
-* **With the pull-up resistor configuration, what is the value read by digitalRead() when the button is released?**
-  * The returned value is 1 (`HIGH`)
-* **Lets say you wanted to design a switch so that when its pressed, the value read from the pin is 1, and when it's released the value is 0\. Would you use a pull-up or pull-down resistor configuration?**
+* **With the pull-down resistor configuration, what is the value read by digitalRead\(\) when the button is pressed?**
+  * The returned value is 1 \(`HIGH`\)
+* **With the pull-down resistor configuration, what is the value read by digitalRead\(\) when the button is released?**
+  * The returned value is 0 \(LOW\)
+* **With the pull-up resistor configuration, what is the value read by digitalRead\(\) when the button is pressed?**
+  * The returned value is 0 \(LOW\)
+* **With the pull-up resistor configuration, what is the value read by digitalRead\(\) when the button is released?**
+  * The returned value is 1 \(`HIGH`\)
+* **Lets say you wanted to design a switch so that when its pressed, the value read from the pin is 1, and when it's released the value is 0. Would you use a pull-up or pull-down resistor configuration?**
   * You would want to use a pull-down resistor configuration.
 
-Here is a small part of the Arduino schematic, [(you can see the whole thing here)](https:////www.arduino.cc/en/uploads/Main/Arduino-Diecimila-schematic.pdf)
+Here is a small part of the Arduino schematic, [\(you can see the whole thing here\)](https:////www.arduino.cc/en/uploads/Main/Arduino-Diecimila-schematic.pdf)
 
-[![](images/arduinoresetschem.jpg)](https:////www.arduino.cc/en/uploads/Main/Arduino-Diecimila-schematic.pdf)
-_Fig 5.7_
+[![](.gitbook/assets/arduinoresetschem.jpg)](https:////www.arduino.cc/en/uploads/Main/Arduino-Diecimila-schematic.pdf) _Fig 5.7_
 
-There is a switch and a resistor (Europeans use a rectangle instead of a squiggly for resistors), they are both connected to a pin on the Arduino microcontroller called RESET (in the bottom right corner)
+There is a switch and a resistor \(Europeans use a rectangle instead of a squiggly for resistors\), they are both connected to a pin on the Arduino microcontroller called RESET \(in the bottom right corner\)
 
 * **Is this switch connected up with a pull-up or pull-down resistor? What value is the resistor?**
   * The resistor is a 10KΩ pull-up
-* **The switch is called S1, look on your Arduino (you may have to remove the shield to see it) to identify S1\. What is S1 used for?**
+* **The switch is called S1, look on your Arduino \(you may have to remove the shield to see it\) to identify S1. What is S1 used for?**
   * S1 is the button you press to reset the Arduino
 * **Based on what S1 does and what you've learned about pullup/pulldown resistors, describe what you think this circuitry does, and how the RESET pin works**
   * Normally the RESET pin is pulled up to 5V. When the button is pressed, the pin is connected to ground. The Arduino microntroller resets itself when the RESET pin is connected to ground.
 
 ## Iffy statements
 
-The next step is to combine inputs (buttons) and outputs (LEDs). We will make a simple digitally-controlled light. The sketch we want to write does the following
+The next step is to combine inputs \(buttons\) and outputs \(LEDs\). We will make a simple digitally-controlled light. The sketch we want to write does the following
 
-  **When the button is pressed, the LED turns on**
+**When the button is pressed, the LED turns on**
 
-  Which we can rephrase more specifically as
+Which we can rephrase more specifically as
 
-  **_If_ the button is pressed, turn on the LED.**
+_**If**_ **the button is pressed, turn on the LED.**
 
-  **_If_ the button is not pressed, turn off the LED.**
+_**If**_ **the button is not pressed, turn off the LED.**
 
 Here is how we will wire up the switch and LED.
 
-![](images/digitallight.png)
+![](.gitbook/assets/digitallight.png)
 
 _Fig 5.8_
 
 Build this schematic on your protoshield
 
-[![](images/digiledswitch_t.jpg)](images/digiledswitch.jpg)
+[![](.gitbook/assets/digiledswitch_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/digiledswitch.jpg)
 
-Copy and paste this sketch into the Arduino software and upload it to the Arduino. Verify that when the button is pressed, the LED turns on and when the button is released, the LED turns off.
-If its not working, try using **println** statements to debug your project: when you press the button have it print out a message. That way you can tell if its the input half that isnt working or the output half.
+Copy and paste this sketch into the Arduino software and upload it to the Arduino. Verify that when the button is pressed, the LED turns on and when the button is released, the LED turns off. If its not working, try using **println** statements to debug your project: when you press the button have it print out a message. That way you can tell if its the input half that isnt working or the output half.
 
 ```c
 /*
@@ -287,9 +271,9 @@ void loop(){
 
 This sketch introduces a completely new and exciting type of statement, the **if statement**. This is a **logical** statement, which you may remember from grade school math class. Basically, until now we've had the Arduino just do stuff: blink LEDs, print out messages, etc. But now we want it to make decisions.
 
-|  if  | (test statement) | {statements to perform if test is True}  |
-|:---: |         :--:     |           :--:                           |
-|if    | ( val == LOW )   |   { digitalWrite(ledPin, `HIGH`); }      |
+| if | \(test statement\) | {statements to perform if test is True} |
+| :---: | :---: | :---: |
+| if | \( val == LOW \) | { digitalWrite\(ledPin, `HIGH`\); } |
 
 The **if** statement is the first statement that is **conditional**, it only runs the statements if a condition is true. In this case, the conditions are "is the button pressed?" and "is the button not pressed?"
 
@@ -351,7 +335,7 @@ Modify the sketch so that it does the opposite, when the button is pressed the L
 
 Swap the lines `digitalWrite(ledPin, HIGH);` and `digitalWrite(ledPin, LOW);`
 
-Modify the sketch so that the LED blinks 5 times a second (100ms on and 100ms off) when the button is pressed and is completely off when the button is released.
+Modify the sketch so that the LED blinks 5 times a second \(100ms on and 100ms off\) when the button is pressed and is completely off when the button is released.
 
 Sample Solution:
 
@@ -377,7 +361,7 @@ void loop(){
 
 **Note that you don't need to do anything if the `switchPin` is `HIGH` because at the end of the `val == LOW` statements the LED has been turned off!**
 
- ```c
+```c
 /*
  *  Switch and 2 LED test program
  */
@@ -408,7 +392,7 @@ void loop(){
 
 Now its your turn: add another red LED and resistor to pin 11, modify the sketch so that when the button is pressed one LED is lit and the other one is off and when the button is released the first LED is off and the second LED is lit.
 
-![](images/2ledswitch.png)
+![](.gitbook/assets/2ledswitch.png)
 
 Try to wire up the protoshield just from the schematic. If you're having trouble, [click here for a photo of the parts wired up.](https:////www.ladyada.net/images/arduino/2ledswitch.jpg)
 
@@ -445,7 +429,7 @@ void loop(){
 
 Having an LED turn on or off when a button is pressed is quite impressive, but it would be pretty odd if you had to press a button constantly to keep the TV on. What we want is an **alternating action switch**, where the press-and-release of a button does something, not just press-and-hold. Basically we want to test whether the button was _just_ released, or _just_ pressed.
 
-To do this, we need to keep track of the button input value, to see if its changed. This is called the **state** of a button. When [the state](https:////en.wikipedia.org/wiki/State_%28computer_science%29) changes (an action occurs), _that's_ when we want to perform an action.
+To do this, we need to keep track of the button input value, to see if its changed. This is called the **state** of a button. When [the state](https:////en.wikipedia.org/wiki/State_%28computer_science%29) changes \(an action occurs\), _that's_ when we want to perform an action.
 
 ```c
 /*
@@ -482,13 +466,13 @@ Upload it to your Arduino and try it out, watching the serial monitor as you pre
 
 Lets go through the new lines of code:
 
-`int buttonState;                // variable to hold the button state`
+`int buttonState; // variable to hold the button state`
 
-This line isn't too unusual, its just a variable that is going to hold the **state** of the button. Since we don't know the state of the button when the Arduino is first turned on, we will leave it as unknown (**uninitialized**).
+This line isn't too unusual, its just a variable that is going to hold the **state** of the button. Since we don't know the state of the button when the Arduino is first turned on, we will leave it as unknown \(**uninitialized**\).
 
-  `buttonState = digitalRead(switchPin);   // read the initial state`
+`buttonState = digitalRead(switchPin); // read the initial state`
 
-In the **setup()** procedure, we **initialize** (set the initial/starting value) of the button state variable by reading the button value once we've started up and set the pin to an input.
+In the **setup\(\)** procedure, we **initialize** \(set the initial/starting value\) of the button state variable by reading the button value once we've started up and set the pin to an input.
 
 ```c
 void loop(){
@@ -516,7 +500,7 @@ if ( it is raining ) {                // look up, is there water falling on me?
 
 Of course, we can't open the umbrella if we don't have one. And there's no point in checking if we have one if its not raining!
 
-In the first **if** statement, we check if the current button state (`HIGH` or LOW) is different than the last time we looked at the button. If it is different (tested by the != inequality operator ) then we execute the next group of statements, enclosed by the {} braces.
+In the first **if** statement, we check if the current button state \(`HIGH` or LOW\) is different than the last time we looked at the button. If it is different \(tested by the != inequality operator \) then we execute the next group of statements, enclosed by the {} braces.
 
 Lets move on and examine the new statement we see, which is the exotic **if-else** statment.
 
@@ -528,24 +512,24 @@ if (val == LOW) {                // check if the button is pressed
 }
 ```
 
-This statement is easy to understand: before, we would run a test and **if** that test passed, we would perform the statements in the {} braces. Now we also have an **alternative**, which is what we should do if the test fails! Now we used to perform two tests, one for **(val == LOW)** and one for **(val == `HIGH`)**. This code is equivalent but its a little more straightforward. If its not LOW it must be `HIGH`.
+This statement is easy to understand: before, we would run a test and **if** that test passed, we would perform the statements in the {} braces. Now we also have an **alternative**, which is what we should do if the test fails! Now we used to perform two tests, one for **\(val == LOW\)** and one for **\(val == `HIGH`\)**. This code is equivalent but its a little more straightforward. If its not LOW it must be `HIGH`.
 
-|**if** |(test statement) | **{ statements to perform if test is True}** |else | **{ statements to perform if test is not True}** |
-|-|-|-|-|-|
-| `if` | `( val == LOW )` | `{ ... }` | `else` | `{ ... }`
+| **if** | \(test statement\) | **{ statements to perform if test is True}** | else | **{ statements to perform if test is not True}** |
+| :--- | :--- | :--- | :--- | :--- |
+| `if` | `( val == LOW )` | `{ ... }` | `else` | `{ ... }` |
 
 In the **if-else** statement, we simply examine **val** to deterimine if the last `digitalRead()` procedure informed us that the button is currently pressed or not pressed.
 
-`buttonState = val;                 // save the new state in our variable`
+`buttonState = val; // save the new state in our variable`
 
 Finally, we make sure that we've updated the button state variable with the current state.
 
 ### Quick Quiz!
 
-* **Remove (or comment out) the line that says "buttonState = val;" from the sketch and re-upload it to the Arduino.   What happens now?
+* \*\*Remove \(or comment out\) the line that says "buttonState = val;" from the sketch and re-upload it to the Arduino.   What happens now?
   * When the button is held down, the Arduino prints out "Button just pressed" over and over again. When its released, nothing is printed
 * **Why does this happen? Go through the sketch, keeping track of what buttonState and val are storing at each line.**
-  * When the Arduino starts up, it sets buttonState to LOW (assuming the button isn't pressed as it is reset). Whenever the button pin is read as `HIGH` the (val != buttonState) test is true and it prints out a message. The buttonState is never set to `HIGH` so it never prints "Button is released" and it always passes the (val != buttonState) test
+  * When the Arduino starts up, it sets buttonState to LOW \(assuming the button isn't pressed as it is reset\). Whenever the button pin is read as `HIGH` the \(val != buttonState\) test is true and it prints out a message. The buttonState is never set to `HIGH` so it never prints "Button is released" and it always passes the \(val != buttonState\) test
 
 ## Counting presses
 
@@ -582,17 +566,19 @@ void loop(){
 }
 ```
 
-We've added one new thing in this sketch, which is the ++ operator. Simply, the statement "buttonPresses++" **increments** (adds 1 to) the buttonPresses variable. This is a shortcut for "buttonPresses = buttonPresses + 1".
+We've added one new thing in this sketch, which is the ++ operator. Simply, the statement "buttonPresses++" **increments** \(adds 1 to\) the buttonPresses variable. This is a shortcut for "buttonPresses = buttonPresses + 1".
 
 ### Quick Quiz!
 
-* **Modify the sketch so that message is only printed when the button is released, not when it's pressed.
-    **
-  * Change the "val == LOW" test to "val == `HIGH`"
-* **Modify the sketch so its a countdown device!
-    Step 1\.** Have the buttonPresses variable start at 10\.**Step 2\.** Every time the button is pressed, _decrement_ the buttonPresses variable (use the -- operator, which does the opposite of ++).**Step 3\.** Once you have that working, have the Arduino print out "We have _x_ presses to go till takeoff!" where x is the number of presses remaining, but only if the number of presses left is larger than 0 (check the conditional test table above to see how to test if a variable is larger than a number)**Step 4\.** Once you have that working, make the Arduino print out "EXPLODE!" on the last button press.**
+* \*\*Modify the sketch so that message is only printed when the button is released, not when it's pressed.
 
-    ![](images/takeoff.jpg)
+    \*\*
+
+  * Change the "val == LOW" test to "val == `HIGH`"
+
+* **Modify the sketch so its a countdown device! Step 1.** Have the buttonPresses variable start at 10.**Step 2.** Every time the button is pressed, _decrement_ the buttonPresses variable \(use the -- operator, which does the opposite of ++\).**Step 3.** Once you have that working, have the Arduino print out "We have _x_ presses to go till takeoff!" where x is the number of presses remaining, but only if the number of presses left is larger than 0 \(check the conditional test table above to see how to test if a variable is larger than a number\)**Step 4.** Once you have that working, make the Arduino print out "EXPLODE!" on the last button press.\*\*
+
+  ![](.gitbook/assets/takeoff.jpg)
 
 #### Possible Solution
 
@@ -637,13 +623,11 @@ void loop(){
 
 _The phone rings, and you pick it up!_
 
-**Voice**: Hello, this is the president of Blinky Lite Fun Company Inc., a company that specializes in blinky light products. We're noticing that a majority of our customers ride bicycles and they'd like to be more safe. We're thinking of offering a bicycle safety light and we hired an electrical engineer to design a light for us. However, he decided to go on a week-long kite surfing expedition and has left us in the lurch.
-Here is the schematic we found on his desk:
+**Voice**: Hello, this is the president of Blinky Lite Fun Company Inc., a company that specializes in blinky light products. We're noticing that a majority of our customers ride bicycles and they'd like to be more safe. We're thinking of offering a bicycle safety light and we hired an electrical engineer to design a light for us. However, he decided to go on a week-long kite surfing expedition and has left us in the lurch. Here is the schematic we found on his desk:
 
-![](images/bikelite.png)
+![](.gitbook/assets/bikelite.png)
 
-All the bike light has to do is turn on when the button is clicked and turn off the next time the button is clicked.
-Can we hire you to finish the project?
+All the bike light has to do is turn on when the button is clicked and turn off the next time the button is clicked. Can we hire you to finish the project?
 
 **You:** Sure, this is not a problem, I'll send you over a contract and get started as soon as the documents are signed!
 
@@ -651,23 +635,11 @@ The contracts are faxed and signed and now it's time to do your job.
 
 Here is a video demonstrating the functionality the customer wants
 
-* **Step 1\. Wire up the 5 red LEDs onto your breadboard as shown in the schematic.**Use jumpers when necessary to connect all of **cathodes** (the negative pin of the LED) to ground.
-    If you're having trouble figuring out the wiring, [click here for a high-res photo](images/liteoff.jpg).
-
-* **Step 2\. Test the LEDs.**
-    Write a simple sketch to verify you've wired them up correctly by blinking all the LEDs.
-
-* **Step 3\. Wire up the switch as shown** (or if its already on the breadboard from the previous projects, leave it as is).
-    If you're having trouble figuring out the wiring, [click here for a high-res photo](images/liteoff.jpg).
-
-* **Step 4\. Test the switch.**
-    Modify an earlier sketch in this lesson so that when the button is held down, all of the LEDs turn on. When the button is released the LEDs turn off
-
-* **Step 5\. Adapt the "Counting Presses" sketch**
-    Instead of a variable called buttonPresses you have a variable called lightMode, which starts at 0 (off). The lightMode variable will keep track of the bike light state. When the button is clicked, check the lightMode value. **If it is 0** (off), set it 1 (on) and turn on all the LEDs, **otherwise** set it 0 (off) and turn off all the LEDs.
-    _Highlight the text below to see a hint
-    _When the button is pressed, use an if-else statement like this:
-    if (lightMode == 0) {  } else {  }
+* **Step 1. Wire up the 5 red LEDs onto your breadboard as shown in the schematic.**Use jumpers when necessary to connect all of **cathodes** \(the negative pin of the LED\) to ground. If you're having trouble figuring out the wiring, [click here for a high-res photo](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/liteoff.jpg).
+* **Step 2. Test the LEDs.** Write a simple sketch to verify you've wired them up correctly by blinking all the LEDs.
+* **Step 3. Wire up the switch as shown** \(or if its already on the breadboard from the previous projects, leave it as is\). If you're having trouble figuring out the wiring, [click here for a high-res photo](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/liteoff.jpg).
+* **Step 4. Test the switch.** Modify an earlier sketch in this lesson so that when the button is held down, all of the LEDs turn on. When the button is released the LEDs turn off
+* **Step 5. Adapt the "Counting Presses" sketch** Instead of a variable called buttonPresses you have a variable called lightMode, which starts at 0 \(off\). The lightMode variable will keep track of the bike light state. When the button is clicked, check the lightMode value. **If it is 0** \(off\), set it 1 \(on\) and turn on all the LEDs, **otherwise** set it 0 \(off\) and turn off all the LEDs. \_Highlight the text below to see a hint \_When the button is pressed, use an if-else statement like this: if \(lightMode == 0\) { } else { }
 
 Here is one possible solution sketch:
 
@@ -730,28 +702,25 @@ void loop(){
 
 _The phone rings, and you pick it up!_
 
-**Voice**: Hello, this is the president of the Blinky Lite Fun Company Inc., thanks for getting us that bicycle light prototype so quickly. It works _pretty_ well, but we have found a **bug** in your design.
-It turns out that every once in a while, when we press the button, the light doesn't turn on or off. Here is a video demonstrating the problem. Can you fix this? We'll send you the check next week, thanks!
+**Voice**: Hello, this is the president of the Blinky Lite Fun Company Inc., thanks for getting us that bicycle light prototype so quickly. It works _pretty_ well, but we have found a **bug** in your design. It turns out that every once in a while, when we press the button, the light doesn't turn on or off. Here is a video demonstrating the problem. Can you fix this? We'll send you the check next week, thanks!
 
-You play a little bit with the bike light prototype and find that, yes, this is a problem. (You should try it out, although depending on your button you may or may not see this problem occur, it is a sneaky bug)
+You play a little bit with the bike light prototype and find that, yes, this is a problem. \(You should try it out, although depending on your button you may or may not see this problem occur, it is a sneaky bug\)
 
-You spend some time looking over your code but can't seem to find the problem. Turns out this is not a **software (sketch) problem,** but actually a **mechanical problem.
-**Inside the little tactile switch is a small disc spring. When you push the button you squeeze the spring so that it makes contact with the two wire connections. When you release, the spring bounces back. This works great except that, well, the spring is _springy_. And that means that once in a while, when you press the button it **bounces** around a little in the switch, making and breaking contact a few times before **settling**.
+You spend some time looking over your code but can't seem to find the problem. Turns out this is not a **software \(sketch\) problem,** but actually a **mechanical problem.** Inside the little tactile switch is a small disc spring. When you push the button you squeeze the spring so that it makes contact with the two wire connections. When you release, the spring bounces back. This works great except that, well, the spring is _springy_. And that means that once in a while, when you press the button it **bounces** around a little in the switch, making and breaking contact a few times before **settling**.
 
 If you have a oscilloscope, you can look at the input to the Arduino pin in detail to see the "bouncing" in action. Here is a screencapture from my Tektronix scope
 
-![](images/switchbounce.jpg)
+![](.gitbook/assets/switchbounce.jpg)
 
-The X axis is time. Each dotted line lengthwise indicates 250 microseconds (.25 milliseconds) The Y axis is voltage. The center is 0 volts (ground) and each dotted line indicates a change of 2V.
+The X axis is time. Each dotted line lengthwise indicates 250 microseconds \(.25 milliseconds\) The Y axis is voltage. The center is 0 volts \(ground\) and each dotted line indicates a change of 2V.
 
-In this image you can see how when the button is released, the voltage into the input pin starts at ground (LOW), then there are some spikes and finally it goes up to 5V (`HIGH`). Most of the time, there are no spikes, but once in a while they do occur. This is called a [contact bounce](https:////en.wikipedia.org/wiki/Switch#Contact_bounce)!
+In this image you can see how when the button is released, the voltage into the input pin starts at ground \(LOW\), then there are some spikes and finally it goes up to 5V \(`HIGH`\). Most of the time, there are no spikes, but once in a while they do occur. This is called a [contact bounce](https:////en.wikipedia.org/wiki/Switch#Contact_bounce)!
 
 **Remember!** The bounces don't occur when the button is held down or not pressed. They only occur during the press or release of a button.
 
 This causes our sketch to hiccup because every once in a while, there's a bounced switch, and when the Arduino checks the pin it thinks that the user pressed and depressed the switch many times. Thus the light turns on for a few microseconds, and then turns off.
 
-How to solve this problem? Well there are some very fancy techniques one can use to **[debounce a button](https:////www.ikalogic.com/debouncing.php)** but there's also a dead-simple one: adding a delay.
-You'll notice that the bounces only occur for half a millisecond. That means that we can check the button twice, at least 1 millisecond apart. If the two readings are different, that means there could have been a bounce. If the two readings are the same, that means that the switch has settled on the value. We'll require that the two readings must read the same before we perform the rest of the sketch. We'll also use a much more generous 10 millisecond delay, which will take care of even the most bouncy of switches.
+How to solve this problem? Well there are some very fancy techniques one can use to [**debounce a button**](https:////www.ikalogic.com/debouncing.php) but there's also a dead-simple one: adding a delay. You'll notice that the bounces only occur for half a millisecond. That means that we can check the button twice, at least 1 millisecond apart. If the two readings are different, that means there could have been a bounce. If the two readings are the same, that means that the switch has settled on the value. We'll require that the two readings must read the same before we perform the rest of the sketch. We'll also use a much more generous 10 millisecond delay, which will take care of even the most bouncy of switches.
 
 ```c
 /*
@@ -831,7 +800,7 @@ Now we have used a `delay()` procedure call to space out our input readings. We 
 
 Note that this line
 
-`buttonState = val;                 // save the new state in our variable`
+`buttonState = val; // save the new state in our variable`
 
 is in the `if` statement that makes sure the two input reads are the same. You should not consider the `val` variable to hold valid information unless you've verified it against the second read, `val2`. Otherwise you will get strange performance
 
@@ -918,14 +887,14 @@ Upload this sketch to your bike light and try it out.
 
 * **Does this sketch work correctly?**
   * No!
-* **What _does_ it do?**
+* **What** _**does**_ **it do?**
   * When the button is pressed to turn the light on, it only blinks once.
-* **Use println() procedure calls and your brain to try and figure out why the sketch acts this way.**
+* **Use println\(\) procedure calls and your brain to try and figure out why the sketch acts this way.**
   * What happens just after the button is pressed to turn the light on?
-  * What happens the next time the loop() procedure runs?**
-    * When the button is just pressed, the **if** statement conditions are true and the light mode changes form 0 (off) to 1 (on).
+  * What happens the next time the loop\(\) procedure runs?\*\*
+    * When the button is just pressed, the **if** statement conditions are true and the light mode changes form 0 \(off\) to 1 \(on\).
     * The LEDs are then turned on for 100ms and then off for 100ms.
-    * However, next time the loop() procedure runs, the **if** conditionals are false (the button state has not changed) and so the code that would blink the LED is not run again. Thus the single blink.
+    * However, next time the loop\(\) procedure runs, the **if** conditionals are false \(the button state has not changed\) and so the code that would blink the LED is not run again. Thus the single blink.
 
 The trick here is that you want to _split up_ your `loop()` procedure into two sections. The first section will do all the button checking and debouncing stuff. It will also determine whether the button state has changed and if so, it will change the `lightMode*`variable appropriately. Once that dirty work has been done, the next section of code will examine the `lightMode` variable and then perform the correct actions for that mode.
 
@@ -1008,13 +977,12 @@ _The phone rings, and you pick it up!_
 
 The final design challenge is to take the sketch from Design Challenge 2 and upgrade it to have at least 4 modes: off, all-on, blinking LEDs, and 'wave'.
 
-* **First, modify the first half of the sketch so that pressing the button cycles through all the modes, from mode 0 to mode 3\.**
+* **First, modify the first half of the sketch so that pressing the button cycles through all the modes, from mode 0 to mode 3.**
   * Use `println()` procedure calls to verify that you are successfully changing between all of the modes
-
   * **Need a Hint?**
 
-    _Highlight the text below to see a clue_
-    <span style="color:white;">
+    _Highlight the text below to see a clue_ 
+
     * With only two modes, you can use an **if-else** statement, but with more than two, you'll need to handle multiple possibilities.
     * Turns out that just like you can nest **if** statements, you can also nest **if-else** statements!
 
@@ -1032,13 +1000,10 @@ The final design challenge is to take the sketch from Design Challenge 2 and upg
       }
       ```
 
-    </span>
-
+    &lt;/span&gt;
 * **After that is working, modify the second half of the sketch so that it performs the different effects for each mode.**
 
 Here is an example of the finished project code:
-
-<span style="color:white;">
 
 ```c
 /*
@@ -1150,7 +1115,7 @@ void loop(){
 }
 ```
 
-</span>
-**For extra credit**, come up with with some more flashy modes, and post your video to the [forums](https:////www.ladyada.net/forums)
+&lt;/span&gt; **For extra credit**, come up with with some more flashy modes, and post your video to the [forums](https:////www.ladyada.net/forums)
 
 **For triple-word-extra credit**, use the 9V battery pack to power your Arduino bike light and [duct tape it to your shirt!](https:////boingboing.net/images/cfa4827569_20070921device3.jpg)
+
