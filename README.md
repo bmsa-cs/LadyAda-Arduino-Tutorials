@@ -10,8 +10,8 @@ All of the lessons have been copied from the original website, and images are in
 
 | Lesson | Completion | Notes |
 |:------:|:----------:|:------|
-| 1      |  50% | Initial Markdown version. Image references updated.|
-| 2      |  50% | Initial Markdown version. Image references updated.|
+| 1      |  50% | Completely reformatted and cleaned up. Need to update screenshots.|
+| 2      |  90% | Completely reformatted and cleaned up. Need to update screenshots.|
 | 3      |  50% | Initial Markdown version. Image references updated.|
 | 4      |  50% | Initial Markdown version. Image references updated.|
-| 5      |  90% | Completely reformated and cleaned up as Markdown. Need to lint.|
+| 5      |  90% | Completely reformatted and cleaned up as Markdown. Need to lint.|

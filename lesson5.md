@@ -76,7 +76,7 @@ Power up the Arduino and try pressing the button. The LED should light up when t
 
 ### Quick Quiz!
 
-*   **What does this wiring setup do? (The LED is connected to ground, but its kind of hidden in this photo) Make a guess and then build it and test your guess.**
+* **What does this wiring setup do? (The LED is connected to ground, but its kind of hidden in this photo) Make a guess and then build it and test your guess.**
     [![](images/miswire_t.jpg)](images/miswire.jpg)  
 * The switch is oriented so that the LED is always on!
 
@@ -148,8 +148,6 @@ You should see it print out two messages depending on whether a the wire jumper 
 
 ![](images/switchreadout.jpg)
 
-
-
     Valid inputs
 
     The best way to completely destroy a microcontroller such as an Arduino is to feed it voltages that are much too high. Make sure your input voltages are between 0 and 5V! **Never connect a 9V battery directly into an input pin, it will fry the pin for good and possibly destroy the Arduino microcontroller!**
@@ -159,16 +157,13 @@ You should see it print out two messages depending on whether a the wire jumper 
 
     There's a 100Ω resistor we use to connect the input pin to either `HIGH` or LOW voltage. Why is it there? Well, lets say you accidentally set `P2` to be an `OUTPUT` type pin, but then you connected it to 5V. If you write a LOW to the pin (0V) but its connected to `HIGH` (5V), you've basically caused a short circuit at that pin. This isn't very good for the pin and could damage it! The 100Ω resistor acts as a buffer, to protect the pin from short circuits.
 
-
 ## Floating high above the clouds
-
 
 Of course, connecting and disconnecting a wire is a lot of work, and we'd like to replace that with a mechanical switch. Only thing is, our switch can only connect and disconnect two wires, it can't alternate connections.
 
 ![](images/nopulldown.png)
 
 ![](images/nopullup.png)
-
 _Fig 5.3 Our two alternative switch wiring possibilities_
 
 For example, in these schematics we can connect and disconnect **pin 2** to 5V, or we can connect and disconnect **pin 2** to ground. In both cases, as long as the button is held down, the pin is connected to a **valid input** voltage. When the button is released, though, **pin 2** is not connected to _anything_. This is called a **floating input** voltage. Basically, it's invalid input!
@@ -213,27 +208,23 @@ Note that the strong and weak connections have nothing to do with whether the sw
 
 [![](images/testswitchpullup_t.jpg)](images/testswitchpullup.jpg)
 
-
-
     Must a pullup/down resistor be 10KΩ?
 
     You'll notice that both the Arduino schematic, and the examples here use a 10KΩ resistor as the pullup or pulldown. Is there something special about 10KΩ? Nope! While, it is pretty much univerally used as the 'default' value, most of the time you can use as high as 100KΩ or as low as 4.7KΩ. Going much lower will waste more power, going higher may give you unstable results (due to microcontroller-internals that are not that important right now).  
     I suggest going with 10KΩ because they are common resistor values and people reading your schematic will be more likely to understand that its 'just a pullup resistor'.
 
-
-
 ### Quick Quiz!
 
-*   **With the pull-down resistor configuration, what is the value read by digitalRead() when the button is pressed?**  
-    * The returned value is 1 (`HIGH`)
-*   **With the pull-down resistor configuration, what is the value read by digitalRead() when the button is released?**  
-    *   The returned value is 0 (LOW)
-*   **With the pull-up resistor configuration, what is the value read by digitalRead() when the button is pressed?**  
-    *   The returned value is 0 (LOW)
-*   **With the pull-up resistor configuration, what is the value read by digitalRead() when the button is released?**  
-    *   The returned value is 1 (`HIGH`)
-*   **Lets say you wanted to design a switch so that when its pressed, the value read from the pin is 1, and when it's released the value is 0\. Would you use a pull-up or pull-down resistor configuration?**  
-    * You would want to use a pull-down resistor configuration.
+* **With the pull-down resistor configuration, what is the value read by digitalRead() when the button is pressed?**  
+  * The returned value is 1 (`HIGH`)
+* **With the pull-down resistor configuration, what is the value read by digitalRead() when the button is released?**  
+  * The returned value is 0 (LOW)
+* **With the pull-up resistor configuration, what is the value read by digitalRead() when the button is pressed?**  
+  * The returned value is 0 (LOW)
+* **With the pull-up resistor configuration, what is the value read by digitalRead() when the button is released?**  
+  * The returned value is 1 (`HIGH`)
+* **Lets say you wanted to design a switch so that when its pressed, the value read from the pin is 1, and when it's released the value is 0\. Would you use a pull-up or pull-down resistor configuration?**  
+  * You would want to use a pull-down resistor configuration.
 
 Here is a small part of the Arduino schematic, [(you can see the whole thing here)](http://www.arduino.cc/en/uploads/Main/Arduino-Diecimila-schematic.pdf)
 
@@ -242,12 +233,12 @@ _Fig 5.7_
 
 There is a switch and a resistor (Europeans use a rectangle instead of a squiggly for resistors), they are both connected to a pin on the Arduino microcontroller called RESET (in the bottom right corner)
 
-*   **Is this switch connected up with a pull-up or pull-down resistor? What value is the resistor?**  
-    * The resistor is a 10KΩ pull-up
-*   **The switch is called S1, look on your Arduino (you may have to remove the shield to see it) to identify S1\. What is S1 used for?**  
-    * S1 is the button you press to reset the Arduino
-*   **Based on what S1 does and what you've learned about pullup/pulldown resistors, describe what you think this circuitry does, and how the RESET pin works**  
-    * Normally the RESET pin is pulled up to 5V. When the button is pressed, the pin is connected to ground. The Arduino microntroller resets itself when the RESET pin is connected to ground.
+* **Is this switch connected up with a pull-up or pull-down resistor? What value is the resistor?**  
+  * The resistor is a 10KΩ pull-up
+* **The switch is called S1, look on your Arduino (you may have to remove the shield to see it) to identify S1\. What is S1 used for?**  
+  * S1 is the button you press to reset the Arduino
+* **Based on what S1 does and what you've learned about pullup/pulldown resistors, describe what you think this circuitry does, and how the RESET pin works**  
+  * Normally the RESET pin is pulled up to 5V. When the button is pressed, the pin is connected to ground. The Arduino microntroller resets itself when the RESET pin is connected to ground.
 
 ## Iffy statements
 
@@ -300,13 +291,11 @@ void loop(){
 
 This sketch introduces a completely new and exciting type of statement, the **if statement**. This is a **logical** statement, which you may remember from grade school math class. Basically, until now we've had the Arduino just do stuff: blink LEDs, print out messages, etc. But now we want it to make decisions.
 
-
 |  if  | (test statement) | {statements to perform if test is True}  |
 |:---: |         :--:     |           :--:                           |
 |if    | ( val == LOW )   |   { digitalWrite(ledPin, `HIGH`); }      |
 
 The **if** statement is the first statement that is **conditional**, it only runs the statements if a condition is true. In this case, the conditions are "is the button pressed?" and "is the button not pressed?"
-
 
 ### Some Conditional Tests
 
@@ -336,7 +325,7 @@ if ( var2 10 ) {
 }
 ```
 
-#### `<` Smaller-than test 	
+#### `<` Smaller-than test
 ```c
 if ( chickenstock < 10 ) {
   Serial.print("We have less than 10 chickens in stock");
@@ -359,7 +348,7 @@ if ( kitten() >= 6 ) {
 }
 ```
 
-Quick Quiz!
+### Quick Quiz!
 
 Modify the sketch so that it does the opposite, when the button is pressed the LED turns off and when it is released it turns on. Remember to change the sketch only, use the same circuitry!
 
@@ -368,6 +357,7 @@ Swap the lines `digitalWrite(ledPin, HIGH);` and `digitalWrite(ledPin, LOW);`
 Modify the sketch so that the LED blinks 5 times a second (100ms on and 100ms off) when the button is pressed and is completely off when the button is released.
 
 Sample Solution:
+
 ```c
 int ledPin = 12;                // LED is connected to pin 12
 int switchPin = 2;              // switch is connected to pin 2
@@ -395,7 +385,7 @@ void loop(){
 /*
  *  Switch and 2 LED test program
  */
- 
+
 int led1Pin = 12;               // LED #1 is connected to pin 12
 int led2Pin = 11;               // LED #2 is connected to pin 11
 int switchPin = 2;              // switch is connected to pin 2
@@ -431,7 +421,7 @@ Here is one possible solution sketch:
 /*
  *  Switch and 2 LED test program
  */
- 
+
 int led1Pin = 12;               // LED #1 is connected to pin 12
 int led2Pin = 11;               // LED #2 is connected to pin 11
 int switchPin = 2;              // switch is connected to pin 2
@@ -559,10 +549,10 @@ Finally, we make sure that we've updated the button state variable with the curr
 
 ### Quick Quiz!
 
-*   **Remove (or comment out) the line that says "buttonState = val;" from the sketch and re-upload it to the Arduino.   What happens now?  
-    * When the button is held down, the Arduino prints out "Button just pressed" over and over again. When its released, nothing is printed
-*   **Why does this happen? Go through the sketch, keeping track of what buttonState and val are storing at each line.**  
-    * When the Arduino starts up, it sets buttonState to LOW (assuming the button isn't pressed as it is reset). Whenever the button pin is read as `HIGH` the (val != buttonState) test is true and it prints out a message. The buttonState is never set to `HIGH` so it never prints "Button is released" and it always passes the (val != buttonState) test
+* **Remove (or comment out) the line that says "buttonState = val;" from the sketch and re-upload it to the Arduino.   What happens now?  
+  * When the button is held down, the Arduino prints out "Button just pressed" over and over again. When its released, nothing is printed
+* **Why does this happen? Go through the sketch, keeping track of what buttonState and val are storing at each line.**  
+  * When the Arduino starts up, it sets buttonState to LOW (assuming the button isn't pressed as it is reset). Whenever the button pin is read as `HIGH` the (val != buttonState) test is true and it prints out a message. The buttonState is never set to `HIGH` so it never prints "Button is released" and it always passes the (val != buttonState) test
 
 ## Counting presses
 
@@ -599,16 +589,14 @@ void loop(){
 }
 ```
 
-
-
 We've added one new thing in this sketch, which is the ++ operator. Simply, the statement "buttonPresses++" **increments** (adds 1 to) the buttonPresses variable. This is a shortcut for "buttonPresses = buttonPresses + 1".
 
 ### Quick Quiz!
 
-*   **Modify the sketch so that message is only printed when the button is released, not when it's pressed.  
+* **Modify the sketch so that message is only printed when the button is released, not when it's pressed.  
     **  
-    * Change the "val == LOW" test to "val == `HIGH`"
-*   **Modify the sketch so its a countdown device!  
+  * Change the "val == LOW" test to "val == `HIGH`"
+* **Modify the sketch so its a countdown device!  
     Step 1\.** Have the buttonPresses variable start at 10\.**Step 2\.** Every time the button is pressed, _decrement_ the buttonPresses variable (use the -- operator, which does the opposite of ++).**Step 3\.** Once you have that working, have the Arduino print out "We have _x_ presses to go till takeoff!" where x is the number of presses remaining, but only if the number of presses left is larger than 0 (check the conditional test table above to see how to test if a variable is larger than a number)**Step 4\.** Once you have that working, make the Arduino print out "EXPLODE!" on the last button press.**  
 
     ![](images/takeoff.jpg)  
@@ -670,19 +658,19 @@ The contracts are faxed and signed and now it's time to do your job.
 
 Here is a video demonstrating the functionality the customer wants
 
-*   **Step 1\. Wire up the 5 red LEDs onto your breadboard as shown in the schematic.**Use jumpers when necessary to connect all of **cathodes** (the negative pin of the LED) to ground.  
+* **Step 1\. Wire up the 5 red LEDs onto your breadboard as shown in the schematic.**Use jumpers when necessary to connect all of **cathodes** (the negative pin of the LED) to ground.  
     If you're having trouble figuring out the wiring, [click here for a high-res photo](images/liteoff.jpg).  
 
-*   **Step 2\. Test the LEDs.**  
+* **Step 2\. Test the LEDs.**  
     Write a simple sketch to verify you've wired them up correctly by blinking all the LEDs.  
 
-*   **Step 3\. Wire up the switch as shown** (or if its already on the breadboard from the previous projects, leave it as is).  
+* **Step 3\. Wire up the switch as shown** (or if its already on the breadboard from the previous projects, leave it as is).  
     If you're having trouble figuring out the wiring, [click here for a high-res photo](images/liteoff.jpg).  
 
-*   **Step 4\. Test the switch.**  
+* **Step 4\. Test the switch.**  
     Modify an earlier sketch in this lesson so that when the button is held down, all of the LEDs turn on. When the button is released the LEDs turn off  
 
-*   **Step 5\. Adapt the "Counting Presses" sketch**  
+* **Step 5\. Adapt the "Counting Presses" sketch**  
     Instead of a variable called buttonPresses you have a variable called lightMode, which starts at 0 (off). The lightMode variable will keep track of the bike light state. When the button is clicked, check the lightMode value. **If it is 0** (off), set it 1 (on) and turn on all the LEDs, **otherwise** set it 0 (off) and turn off all the LEDs.  
     _Highlight the text below to see a hint  
     _When the button is pressed, use an if-else statement like this:  
@@ -940,11 +928,11 @@ Upload this sketch to your bike light and try it out.
 
 ### Quick Quiz!
 
-*   **Does this sketch work correctly?**  
+* **Does this sketch work correctly?**  
     * No!
-*   **What _does_ it do?**  
+* **What _does_ it do?**  
     * When the button is pressed to turn the light on, it only blinks once.
-*   **Use println() procedure calls and your brain to try and figure out why the sketch acts this way.**
+* **Use println() procedure calls and your brain to try and figure out why the sketch acts this way.**
     * What happens just after the button is pressed to turn the light on?  
     * What happens the next time the loop() procedure runs?**  
       * When the button is just pressed, the **if** statement conditions are true and the light mode changes form 0 (off) to 1 (on).  
@@ -1032,7 +1020,7 @@ _The phone rings, and you pick it up!_
 
 The final design challenge is to take the sketch from Design Challenge 2 and upgrade it to have at least 4 modes: off, all-on, blinking LEDs, and 'wave'.
 
-*   **First, modify the first half of the sketch so that pressing the button cycles through all the modes, from mode 0 to mode 3\.**  
+* **First, modify the first half of the sketch so that pressing the button cycles through all the modes, from mode 0 to mode 3\.**  
     * Use `println()` procedure calls to verify that you are successfully changing between all of the modes  
 
     * Need a Hint? **_Highlight the text below to see a clue
