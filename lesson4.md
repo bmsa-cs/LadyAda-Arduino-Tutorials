@@ -97,9 +97,9 @@ The first line of code in the `setup` procedure is this one:
 
 We definitely see that there is a **Serial** thing going on, and it looks like there is a procedure call as well. This is a **library procedure call**. The library is called **Serial** and inside the library is a procedure called `begin`.
 
-| library name | . | **procedure name** | \(input values\) | **;** |
-| :---: | :---: | :---: | :---: | :---: |
-| Serial | . | begin | \(9600\) | ; |
+| library name | . | **procedure name** | \(input values\) |
+| :---: | :---: | :---: | :---: |
+| Serial | . | begin | \(9600\) |
 
 If there's no library name, it means that the procedure is in the 'default' collection of procedures we use. For example, `delay()` is so common, the designers of the Arduino software didn't bother putting it into a library.
 
