@@ -14,8 +14,6 @@ Libraries are great places, and not yet illegal in the United States! If you eve
 
 The library we will be using is the Serial Library, which allows the Arduino to send data back to the computer:
 
-![](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/serial%20library.gif)
-
 ## What is Serial?
 
 **Serial** may sound like a tasty breakfast food, but its actually quite different. The word **serial** means "one after the other." For example, a serial killer doesn't stop with one murder, but stabs many people one after the other. Serial data transfer is when we transfer data one **bit** at a time, one right after the other.
@@ -298,7 +296,9 @@ I could go on and on about operators, its all very important stuff, but many peo
 
 Let's make our first simple calculator, to calculate a **hypoteneuse**. If you remember from grade school, if you have a right-triangle, the hypoteneuse `h` can be calculated from the lengths of the two legs, c1 and c2 \(which we'll call `a` & `b`\)
 
-a2 + b2 = h2 h = √\(a2 + b2\)
+a^2 + b^2 = h^2
+
+h = √\(a^2 + b^2\)
 
 ```c
 /*
@@ -414,7 +414,8 @@ OK, lets add a section of code that will print out the number of Megabytes in th
  */
 
 int drive_gb = 5;
-int drive_mb; void setup()                    // run once, when the sketch starts
+int drive_mb;
+void setup()                    // run once, when the sketch starts
 {
   Serial.begin(9600);           // set up Serial library at 9600 bps
 
@@ -459,7 +460,7 @@ Keeping that in mind, remember in [lesson 2](lesson2.md) we said that when we de
 
 _Highlight the text below for the answer_  There are 8 bits in 1 byte so 2 bytes is 16 bits
 
-To figure out how big a number we can store in a 2 byte-sized box use a calculator and take 2 to the power of the number of bits \(since each bit can store 2 values, 0 or 1\). Then we subtract 1 because like in the car odometer, you can't actually display the final value, 10000. So, in this case the largest number is 216 - 1 = 65535. Since the number we're trying to store \(102400\) is larger than that, we see that "rollover."
+To figure out how big a number we can store in a 2 byte-sized box use a calculator and take 2 to the power of the number of bits \(since each bit can store 2 values, 0 or 1\). Then we subtract 1 because like in the car odometer, you can't actually display the final value, 10000. So, in this case the largest number is 2^16 - 1 = 65535. Since the number we're trying to store \(102400\) is larger than that, we see that "rollover."
 
 OK let's fix it! All we need to do is change the variable type so that it can store more than 2 bytes of data. Here is a short list of types we can use.
 
@@ -692,8 +693,6 @@ void loop()                       // run over and over again
 {
 }
 ```
-
-&lt;/span&gt;
 
 ## Conclusion
 
