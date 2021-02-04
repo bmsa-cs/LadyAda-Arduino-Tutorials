@@ -94,23 +94,24 @@ In previous lessons we set a pin on the microcontroller \(say **pin 13**\) to `H
 For our first test, we will use a wire as our switch. Turn on the Arduino and run this little sketch
 
 ```c
-  /*
-  * Switch test program
-  */
-  int switchPin = 2;              // Switch connected to digital pin 2
+/*
+* Switch test program
+*/
+int switchPin = 2;              // Switch connected to digital pin 2
+int val;
 
-  void setup()                    // run once, when the sketch starts
-  {
-    Serial.begin(9600);           // set up Serial library at 9600 bps
-    pinMode(switchPin, INPUT);    // sets the digital pin as input to read switch
-  }
+void setup()                    // run once, when the sketch starts
+{
+  Serial.begin(9600);           // set up Serial library at 9600 bps
+  pinMode(switchPin, INPUT);    // sets the digital pin as input to read switch
+}
 
-  void loop()                     // run over and over again
-  {
-    Serial.print("Read switch input: ");
-    Serial.println(digitalRead(switchPin));    // Read the pin and display the value
-    delay(100);
-  }
+void loop()                     // run over and over again
+{
+  Serial.print("Read switch input: ");
+  Serial.println(digitalRead(switchPin));    // Read the pin and display the value
+  delay(100);
+}
 ```
 
 You'll note that we have to tell the Arduino to set the pin as an input. This is pretty easy, use `pinMode()` but use `INPUT` instead of `OUTPUT`
@@ -124,8 +125,8 @@ We also use the new `digitalRead()` procedure, which just takes as an input the 
 The `digitalRead()` procedure **returns a result** when its done. That result is either 0 \(`LOW`\) or 1 \(`HIGH`\) depending on what it saw when it looked at the pin's voltage. In this case, we read the pin and then **pass the result** as an input to _another_ procedure, `println()`. Sure we could use a variable to hold the result from `digitalRead()` and then use that variable as input to `println()` but this is much more succinct.
 
 ```c
-var = digitalRead(switchPin);      // read the pin and save it into var
-Serial.println(var);               // print out the value stored in var
+val = digitalRead(switchPin);      // read the pin and save it into val
+Serial.println(val);               // print out the value stored in val
 ```
 
 Now use a wire to alternate between connecting **Pin 2** to 5V and Ground through a 100Ω resistor, and watch the serial monitor.
