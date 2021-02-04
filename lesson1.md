@@ -16,8 +16,8 @@ Make sure you've gone through [Lesson 0](https://learn.adafruit.com/ladyadas-lea
 
 | Image | Description | Supplier | Price |
 | :---: | :---: | :---: | :---: |
-| ![Arduino](.gitbook/assets/diecimilla%20%281%29.jpg) | Assembled Arduino board, preferrably a Diecimila \(or whatever the latest version is\) | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |
-| [![USB Cable](.gitbook/assets/usbcable%20%281%29.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/10MHzcermosc.jpg) | USB Cable. Standard A-B cable is required. Any length is OK. | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62)   Or any computer supply store | $5 |
+| ![Arduino](.gitbook/assets/diecimilla%20%282%29.jpg) | Assembled Arduino board, preferrably a Diecimila \(or whatever the latest version is\) | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |
+| [![USB Cable](.gitbook/assets/usbcable%20%282%29.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/10MHzcermosc.jpg) | USB Cable. Standard A-B cable is required. Any length is OK. | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62)   Or any computer supply store | $5 |
 | ![5mm LED](.gitbook/assets/clear5mmled_t%20%281%29.jpg) | LED - **Optional**   Nearly any LED is OK, as long as it has two wire legs. This part is only required for **NG rev c** Arduinos \(and maybe other older ones\). Diecimila Arduino's have this part 'built-in' | Any electronics supply store | $1 |
 
 ## Download the Software
@@ -54,13 +54,13 @@ The process will extract and install all the required files to execute properly 
 
 ### Mac OS X
 
-![Arduino app download](.gitbook/assets/mac_download.jpg)
+![Arduino app download](.gitbook/assets/Mac_Download.jpg)
 
 _Image by Arduino.cc._
 
 Copy the Arduino application into the Applications folder \(or elsewhere on your computer\).
 
-![Arduino app copied to Applications](.gitbook/assets/mac_app.jpg)
+![Arduino app copied to Applications](.gitbook/assets/MAC_App.jpg)
 
 _Image by Arduino.cc._
 

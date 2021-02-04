@@ -292,7 +292,7 @@ I could go on and on about operators, its all very important stuff, but many peo
 
 ## Pythagorean party
 
-![](.gitbook/assets/200px-triangle_sides.svg.png)
+![](.gitbook/assets/200px-Triangle_Sides.svg.png)
 
 Let's make our first simple calculator, to calculate a **hypoteneuse**. If you remember from grade school, if you have a right-triangle, the hypoteneuse `h` can be calculated from the lengths of the two legs, c1 and c2 \(which we'll call `a` & `b`\)
 

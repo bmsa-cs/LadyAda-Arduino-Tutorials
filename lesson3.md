@@ -11,7 +11,7 @@ You've started modifying sketches, and played a bit with the onboard LED \(or if
 | [![](.gitbook/assets/diecimilla.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/attiny2313dip.jpg) | Assembled Arduino board, preferrably a Diecimila \(or whatever the latest version is\) but NG is OK too | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |  |
 | [![](.gitbook/assets/usbcable.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/10MHzcermosc.jpg) | USB Cable.   Standard A-B cable is required. Any length is OK. | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62) | Or any computer supply store | $5 |
 | ![](.gitbook/assets/clear5mmled_t.jpg) | LEDs   For this lesson, a red, green and blue LED are best. Make sure you get a "5mm" or "3mm" LED, with two legs, as shown in the example image. "Ultrabright" LEDs \(1000 mcd rating or higher\) are preferred | Any electronics supply store |  |  |
-| ![](.gitbook/assets/resleft_t%20%281%29.gif) ![](.gitbook/assets/rbrown_t.gif) ![](.gitbook/assets/rblack_t.gif) ![](.gitbook/assets/rred_t%20%281%29.gif) ![](.gitbook/assets/spacer_t%20%283%29.gif) ![](.gitbook/assets/rgold_t%20%283%29.gif) ![](.gitbook/assets/resright_t%20%283%29.gif) | Three 1KΩ Resistors \(brown black red gold\)   Any values from 300 Ω to 2KΩ are probably OK. | Any electronics supply store | $1 |  |
+| ![](.gitbook/assets/resleft_t%20%284%29%20%281%29.gif) ![](.gitbook/assets/rBrown_t.gif) ![](.gitbook/assets/rblack_t%20%283%29.gif) ![](.gitbook/assets/rRed_t%20%281%29.gif) ![](.gitbook/assets/spacer_t%20%282%29%20%283%29.gif) ![](.gitbook/assets/rGold_t%20%283%29.gif) ![](.gitbook/assets/resright_t%20%284%29%20%283%29.gif) | Three 1KΩ Resistors \(brown black red gold\)   Any values from 300 Ω to 2KΩ are probably OK. | Any electronics supply store | $1 |  |
 | ![](.gitbook/assets/miniproto_t.jpg) | Arduino Prototyping Shield with tiny breadboard | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=51) + [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=18&products_id=65) | $15/$7.50 |  |
 | [![](.gitbook/assets/breadboard-half.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/breadboard-half.jpg) | Standard solderless breadboard  If you dont have a protoshield, this is a substitute | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=18&products_id=64) | $5 |  |
 | ![](.gitbook/assets/100ftsolid_t.jpg) | Hookup Wire  Get 22 gauge solid-core wire in red, black and some other color. Make sure its _not_ stranded wire! | Any hardware store |  |  |
@@ -58,7 +58,7 @@ Now is a good time to practice making jumpers, go forth and make a few 3" long j
 
 The resistor is the most basic and also most common electronic part. An electronic gadget, such as an mp3 player has easily a _thousand_ resistors inside of it!
 
-![](.gitbook/assets/22k.jpg)
+![](.gitbook/assets/22K.jpg)
 
 _Behold...a resistor!_
 
@@ -82,7 +82,7 @@ Resistance is measured in **ohms**, often written as the symbol **Ω**. The bigg
 
 * **What is the value of this resistor?**
 
-  ![](.gitbook/assets/resleft_t%20%283%29.gif) ![](.gitbook/assets/ryellow_t.gif) ![](.gitbook/assets/rviolet_t.gif) ![](.gitbook/assets/rred_t.gif) ![](.gitbook/assets/spacer_t%20%282%29.gif) ![](.gitbook/assets/rgold_t%20%282%29.gif) ![](.gitbook/assets/resright_t%20%282%29.gif)
+  ![](.gitbook/assets/resleft_t%20%284%29%20%283%29.gif) ![](.gitbook/assets/ryellow_t.gif) ![](.gitbook/assets/rViolet_t.gif) ![](.gitbook/assets/rRed_t.gif) ![](.gitbook/assets/spacer_t%20%282%29%20%282%29.gif) ![](.gitbook/assets/rGold_t%20%282%29.gif) ![](.gitbook/assets/resright_t%20%284%29%20%282%29.gif)
 
   _Highlight the text below to see the answer_ The stripes are yellow \(4\) - violet \(7\) - red \(\* 100\) = 4700 Ω = 4.7KΩ
 
@@ -369,7 +369,7 @@ Compile and verify your code. Does it work? If not use your debugging skills to 
 
 Now that you have red, green and blue light, you can start having fun with _color mixing_. Color mixing is the neat ability that our eyes have to combine different light colors and create a new color
 
-![A additive \(light\) color mixing diagram](.gitbook/assets/additivecolormixing.png)
+![A additive \(light\) color mixing diagram](.gitbook/assets/AdditiveColorMixing.png)
 
 _A additive \(light\) color mixing diagram_
 

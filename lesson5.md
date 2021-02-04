@@ -47,6 +47,7 @@ Normally, the two wires are disconnected \(**normally open\)** but when you pres
 To get the buttons to sit better in the protoshield, you may want to straighten out the legs \(just squish them with a pair of pliers\) so that they look like the button on the left.
 
 ### Quick Quiz!
+
 * **Find 5 things around the house that have switches. Whats the average number of switches per device?**
 
 ## Light Switch
@@ -63,8 +64,6 @@ Power up the Arduino and try pressing the button. The LED should light up when t
 
 [![](.gitbook/assets/buttonpress1_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/buttonpress1.jpg)
 
-> \*\*\*\*
-
 {% hint style="warning" %}
 **Switch capability**
 
@@ -72,42 +71,51 @@ Before you try to turn a 100W lightbulb on and off using a pushbutton switch, be
 {% endhint %}
 
 ### Quick Quiz!
+
 {% tabs %}
 {% tab title="Question" %}
 **What does this wiring setup do? \(The LED is connected to ground, but its kind of hidden in this photo\) Make a guess and then build it and test your guess.**
 
-    [![](.gitbook/assets/miswire_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/miswire.jpg)
+![](.gitbook/assets/miswire_t.jpg)
 {% endtab %}
+
 {% tab title="Answer" %}
 The switch is oriented so that the LED is always on!
 {% endtab %}
 {% endtabs %}
 
-These switches have the part number **B3F-1000**, [here is a datasheet webpage for the part](https:////www.adafruit.com/datasheets/B3F-1000-Omron.pdf). There's a lot of information, but learning how to navigate these sorts of pages is rather important. Use your detective skills to figure out the follwing:
+These switches have the part number **B3F-1000**, [here is a datasheet webpage for the part](https:////www.adafruit.com/datasheets/B3F-1000-Omron.pdf). There's a lot of information, but learning how to navigate these sorts of pages is rather important. Use your detective skills to figure out the following:
+
 {% tabs %}
 {% tab title="Question" %}
-**What is the maxiumum amount of current this button can switch?**
+**What is the maximum amount of current this button can switch?**
 {% endtab %}
+
 {% tab title="Answer" %}
 50 mA
 {% endtab %}
 {% endtabs %}
+
 {% tabs %}
 {% tab title="Question" %}
 **What is the maximum voltage you can use this switch for?**
 {% endtab %}
+
 {% tab title="Answer" %}
 24V
 {% endtab %}
 {% endtabs %}
+
 {% tabs %}
 {% tab title="Question" %}
 **What is the recommended Operating Force \(how hard the button is pressed\) for the B3F-1000?**
 {% endtab %}
+
 {% tab title="Answer" %}
 0.98 Newtons \(100 gf\)
 {% endtab %}
 {% endtabs %}
+
 ## DigitalRead
 
 Switches are great for controlling current, as shown by our little light switch demo. But they're even better as input devices!
@@ -158,7 +166,7 @@ Now use a wire to alternate between connecting **Pin 2** to 5V and Ground throug
 
 [![](.gitbook/assets/tiehigh_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/tiehigh.jpg) _Switch input tied `HIGH` \(5v\)_
 
- __[![](.gitbook/assets/tielow_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/tielow.jpg) _Switch input tied LOW \(ground\)_
+_\__[![](.gitbook/assets/tielow_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/tielow.jpg) _\_Switch input tied LOW \(ground\)_
 
 You should see it print out two messages depending on whether a the wire jumper connects the input to `HIGH` \(5V\) or LOW \(ground\) voltage. Dont forget, in digital binary land, `HIGH` is another word for 1 and `LOW` is another word for 0.
 
@@ -178,13 +186,11 @@ Of course, connecting and disconnecting a wire is a lot of work, and we'd like t
 
 ![](.gitbook/assets/nopulldown.png)
 
-
-
 ![](.gitbook/assets/nopullup.png) _Fig 5.3 Our two alternative switch wiring possibilities_
 
 For example, in these schematics we can connect and disconnect **pin 2** to 5V, or we can connect and disconnect **pin 2** to ground. In both cases, as long as the button is held down, the pin is connected to a **valid input** voltage. When the button is released, though, **pin 2** is not connected to _anything_. This is called a **floating input** voltage. Basically, it's invalid input!
 
-Try building up one of these schematics, and trying out the switch testing sketch above. When the button is held down you should definately get the right printout. When its released, it may keep the old value, or it may change, but its certainly not reliable!
+Try building up one of these schematics, and trying out the switch testing sketch above. When the button is held down you should definitely get the right printout. When it's released, it may keep the old value, or it may change, but its certainly not reliable!
 
 [![](.gitbook/assets/testswitchnopulldown_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/testswitchnopulldown.jpg) _Wiring when the switch is connected to 5V_
 
@@ -194,7 +200,7 @@ One solution is to get a switch that alternates connections, like this one, diag
 
 ![](.gitbook/assets/simplespdt.png) _Fig 5.4_
 
-The problem is, these switches are suprisingly complex and 10 times more expensive than a little tactile button! Instead we use a trick called a **pull-down** resistor.
+The problem is, these switches are surprisingly complex and 10 times more expensive than a little tactile button! Instead we use a trick called a **pull-down** resistor.
 
 ![](.gitbook/assets/pulldown.png) _Fig 5.5_
 
@@ -221,7 +227,7 @@ Note that the strong and weak connections have nothing to do with whether the sw
 {% hint style="info" %}
 **Must a pullup/down resistor be 10KΩ?**
 
-You'll notice that both the Arduino schematic, and the examples here use a 10KΩ resistor as the pullup or pulldown. Is there something special about 10KΩ? Nope! While, it is pretty much univerally used as the 'default' value, most of the time you can use as high as 100KΩ or as low as 4.7KΩ. Going much lower will waste more power, going higher may give you unstable results \(due to microcontroller-internals that are not that important right now\). I suggest going with 10KΩ because they are common resistor values and people reading your schematic will be more likely to understand that its 'just a pullup resistor'.
+You'll notice that both the Arduino schematic, and the examples here use a 10KΩ resistor as the pullup or pulldown. Is there something special about 10KΩ? Nope! While, it is pretty much universally used as the 'default' value, most of the time you can use as high as 100KΩ or as low as 4.7KΩ. Going much lower will waste more power, going higher may give you unstable results \(due to microcontroller-internals that are not that important right now\). I suggest going with 10KΩ because they are common resistor values and people reading your schematic will be more likely to understand that it's 'just a pullup resistor'.
 {% endhint %}
 
 ### Quick Quiz!
@@ -287,7 +293,7 @@ There is a switch and a resistor \(Europeans use a rectangle instead of a squigg
 * **The switch is called S1, look on your Arduino \(you may have to remove the shield to see it\) to identify S1. What is S1 used for?**
   * S1 is the button you press to reset the Arduino
 * **Based on what S1 does and what you've learned about pullup/pulldown resistors, describe what you think this circuitry does, and how the RESET pin works**
-  * Normally the RESET pin is pulled up to 5V. When the button is pressed, the pin is connected to ground. The Arduino microntroller resets itself when the RESET pin is connected to ground.
+  * Normally the RESET pin is pulled up to 5V. When the button is pressed, the pin is connected to ground. The Arduino microcontroller resets itself when the RESET pin is connected to ground.
 
 ## Iffy statements
 
@@ -311,7 +317,7 @@ Build this schematic on your protoshield
 
 [![](.gitbook/assets/digiledswitch_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/digiledswitch.jpg)
 
-Copy and paste this sketch into the Arduino software and upload it to the Arduino. Verify that when the button is pressed, the LED turns on and when the button is released, the LED turns off. If its not working, try using **println** statements to debug your project: when you press the button have it print out a message. That way you can tell if its the input half that isnt working or the output half.
+Copy and paste this sketch into the Arduino software and upload it to the Arduino. Verify that when the button is pressed, the LED turns on and when the button is released, the LED turns off. If its not working, try using **println** statements to debug your project: when you press the button have it print out a message. That way you can tell if its the input half that isn't working or the output half.
 
 ```c
 /*
@@ -404,6 +410,7 @@ if ( kitten() >= 6 ) {
 {% tab title="Question" %}
 Modify the sketch so that it does the opposite, when the button is pressed the LED turns off and when it is released it turns on. Remember to change the sketch only, use the same circuitry!
 {% endtab %}
+
 {% tab title="Answer" %}
 Swap the lines `digitalWrite(ledPin, HIGH);` and `digitalWrite(ledPin, LOW);`
 {% endtab %}
@@ -413,6 +420,7 @@ Swap the lines `digitalWrite(ledPin, HIGH);` and `digitalWrite(ledPin, LOW);`
 {% tab title="Question" %}
 Modify the sketch so that the LED blinks 5 times a second \(100ms on and 100ms off\) when the button is pressed and is completely off when the button is released.
 {% endtab %}
+
 {% tab title="Answer" %}
 Sample Solution:
 
@@ -558,7 +566,7 @@ Of course, we can't open the umbrella if we don't have one. And there's no point
 
 In the first **if** statement, we check if the current button state \(`HIGH` or LOW\) is different than the last time we looked at the button. If it is different \(tested by the != inequality operator \) then we execute the next group of statements, enclosed by the {} braces.
 
-Lets move on and examine the new statement we see, which is the exotic **if-else** statment.
+Lets move on and examine the new statement we see, which is the exotic **if-else** statement.
 
 ```c
 if (val == LOW) {                // check if the button is pressed
@@ -568,24 +576,25 @@ if (val == LOW) {                // check if the button is pressed
 }
 ```
 
-This statement is easy to understand: before, we would run a test and **if** that test passed, we would perform the statements in the {} braces. Now we also have an **alternative**, which is what we should do if the test fails! Now we used to perform two tests, one for **\(val == LOW\)** and one for **\(val == `HIGH`\)**. This code is equivalent but its a little more straightforward. If its not LOW it must be `HIGH`.
+This statement is easy to understand: before, we would run a test and **if** that test passed, we would perform the statements in the {} braces. Now we also have an **alternative**, which is what we should do if the test fails! Now we used to perform two tests, one for **\(val == LOW\)** and one for **\(val == `HIGH`\)**. This code is equivalent but its a little more straightforward. If it's not LOW it must be `HIGH`.
 
 | **if** | \(test statement\) | **{ statements to perform if test is True}** | else | **{ statements to perform if test is not True}** |
 | :--- | :--- | :--- | :--- | :--- |
 | `if` | `( val == LOW )` | `{ ... }` | `else` | `{ ... }` |
 
-In the **if-else** statement, we simply examine **val** to deterimine if the last `digitalRead()` procedure informed us that the button is currently pressed or not pressed.
+In the **if-else** statement, we simply examine **val** to determine if the last `digitalRead()` procedure informed us that the button is currently pressed or not pressed.
 
 `buttonState = val; // save the new state in our variable`
 
 Finally, we make sure that we've updated the button state variable with the current state.
 
 ### Quick Quiz!
+
 {% tabs %}
 {% tab title="Question" %}
-\*\*Remove \(or comment out\) the line that says "buttonState = val;" from the sketch and re-upload it to the Arduino.   What happens now?
-
+**Remove \(or comment out\) the line that says `"buttonState = val;"` from the sketch and re-upload it to the Arduino. What happens now?**
 {% endtab %}
+
 {% tab title="Answer" %}
 When the button is held down, the Arduino prints out "Button just pressed" over and over again. When its released, nothing is printed.
 {% endtab %}
@@ -594,14 +603,16 @@ When the button is held down, the Arduino prints out "Button just pressed" over 
 {% tabs %}
 {% tab title="Question" %}
 **Why does this happen? Go through the sketch, keeping track of what buttonState and val are storing at each line.**
+{% endtab %}
 
 {% tab title="Answer" %}
-When the Arduino starts up, it sets buttonState to LOW \(assuming the button isn't pressed as it is reset\). Whenever the button pin is read as `HIGH` the \(val != buttonState\) test is true and it prints out a message. The buttonState is never set to `HIGH` so it never prints "Button is released" and it always passes the \(val != buttonState\) test
+When the Arduino starts up, it sets buttonState to LOW \(assuming the button isn't pressed as it is reset\). Whenever the button pin is read as `HIGH` the \(val != buttonState\) test is true and it prints out a message. The buttonState is never set to `HIGH` so it never prints "Button is released" and it always passes the \(val != buttonState\) test.
 {% endtab %}
 {% endtabs %}
+
 ## Counting presses
 
-A pretty useful techinque you'll want to add to your collection of sketch-knowledge is how to keep track of button presses. Try this sketch
+A pretty useful technique you'll want to add to your collection of sketch-knowledge is how to keep track of button presses. Try this sketch
 
 ```c
 /*
@@ -637,10 +648,12 @@ void loop(){
 We've added one new thing in this sketch, which is the ++ operator. Simply, the statement "buttonPresses++" **increments** \(adds 1 to\) the buttonPresses variable. This is a shortcut for "buttonPresses = buttonPresses + 1".
 
 ### Quick Quiz!
+
 {% tabs %}
 {% tab title="Question" %}
-*\*Modify the sketch so that message is only printed when the button is released, not when it's pressed.\*\*
+_\_Modify the sketch so that message is only printed when the button is released, not when it's pressed.\*\*
 {% endtab %}
+
 {% tab title="Answer" %}
 Change the `val == LOW` test to `val == HIGH`
 {% endtab %}
@@ -650,8 +663,9 @@ Change the `val == LOW` test to `val == HIGH`
 {% tab title="Question" %}
 **Modify the sketch so its a countdown device! Step 1.** Have the buttonPresses variable start at 10.**Step 2.** Every time the button is pressed, _decrement_ the buttonPresses variable \(use the -- operator, which does the opposite of ++\).**Step 3.** Once you have that working, have the Arduino print out "We have _x_ presses to go till takeoff!" where x is the number of presses remaining, but only if the number of presses left is larger than 0 \(check the conditional test table above to see how to test if a variable is larger than a number\)**Step 4.** Once you have that working, make the Arduino print out "EXPLODE!" on the last button press.\*\*
 
-  ![](.gitbook/assets/takeoff.jpg)
+![](.gitbook/assets/takeoff.jpg)
 {% endtab %}
+
 {% tab title="Answer" %}
 Possible Solution
 
@@ -698,7 +712,7 @@ void loop(){
 
 _The phone rings, and you pick it up!_
 
-**Voice**: Hello, this is the president of Blinky Lite Fun Company Inc., a company that specializes in blinky light products. We're noticing that a majority of our customers ride bicycles and they'd like to be more safe. We're thinking of offering a bicycle safety light and we hired an electrical engineer to design a light for us. However, he decided to go on a week-long kite surfing expedition and has left us in the lurch. Here is the schematic we found on his desk:
+> **Voice**: Hello, this is the president of Blinky Lite Fun Company Inc., a company that specializes in blinky light products. We're noticing that a majority of our customers ride bicycles and they'd like to be more safe. We're thinking of offering a bicycle safety light and we hired an electrical engineer to design a light for us. However, he decided to go on a week-long kite surfing expedition and has left us in the lurch. Here is the schematic we found on his desk:
 
 ![](.gitbook/assets/bikelite.png)
 
@@ -710,7 +724,7 @@ The contracts are faxed and signed and now it's time to do your job.
 
 * **Step 1. Wire up the 5 red LEDs onto your breadboard as shown in the schematic.**Use jumpers when necessary to connect all of **cathodes** \(the negative pin of the LED\) to ground. If you're having trouble figuring out the wiring, see below for a photo.
 * **Step 2. Test the LEDs.** Write a simple sketch to verify you've wired them up correctly by blinking all the LEDs.
-* **Step 3. Wire up the switch as shown** \(or if its already on the breadboard from the previous projects, leave it as is\). If you're having trouble figuring out the wiring, see below for a photo.
+* **Step 3. Wire up the switch as shown** \(or if it's already on the breadboard from the previous projects, leave it as is\). If you're having trouble figuring out the wiring, see below for a photo.
 * **Step 4. Test the switch.** Modify an earlier sketch in this lesson so that when the button is held down, all of the LEDs turn on. When the button is released the LEDs turn off
 * **Step 5. Adapt the "Counting Presses" sketch** Instead of a variable called buttonPresses you have a variable called lightMode, which starts at 0 \(off\). The lightMode variable will keep track of the bike light state. When the button is clicked, check the lightMode value. **If it is 0** \(off\), set it 1 \(on\) and turn on all the LEDs, **otherwise** set it 0 \(off\) and turn off all the LEDs. 
 
@@ -795,7 +809,7 @@ void loop(){
 
 _The phone rings, and you pick it up!_
 
-**Voice**: Hello, this is the president of the Blinky Lite Fun Company Inc., thanks for getting us that bicycle light prototype so quickly. It works _pretty_ well, but we have found a **bug** in your design. It turns out that every once in a while, when we press the button, the light doesn't turn on or off. Here is a video demonstrating the problem. Can you fix this? We'll send you the check next week, thanks!
+> **Voice**: Hello, this is the president of the Blinky Lite Fun Company Inc., thanks for getting us that bicycle light prototype so quickly. It works _pretty_ well, but we have found a **bug** in your design. It turns out that every once in a while, when we press the button, the light doesn't turn on or off. Here is a video demonstrating the problem. Can you fix this? We'll send you the check next week, thanks!
 
 You play a little bit with the bike light prototype and find that, yes, this is a problem. \(You should try it out, although depending on your button you may or may not see this problem occur, it is a sneaky bug\)
 
@@ -901,7 +915,7 @@ is in the `if` statement that makes sure the two input reads are the same. You s
 
 _The phone rings, and you pick it up!_
 
-**Voice**: Hello, this is the president of Blinky Lite Fun Company Inc., your correction has solved our flaky light problem. The bike light works great. Only thing is, its just not, well, _blinky_ enough! And this **is** the _Blinky_ Lite Fun Company Inc. Can you make the light more blinky? We'll send you the check next week, kthxbye!
+> **Voice**: Hello, this is the president of Blinky Lite Fun Company Inc., your correction has solved our flaky light problem. The bike light works great. Only thing is, its just not, well, _blinky_ enough! And this **is** the _Blinky_ Lite Fun Company Inc. Can you make the light more blinky? We'll send you the check next week, kthxbye!
 
 Well, OK that shouldn't be too hard. You modify the debounced sketch so it looks like this:
 
@@ -977,10 +991,12 @@ You are feeling pretty proud because you remembered that you did not have to tur
 Upload this sketch to your bike light and try it out.
 
 ### Quick Quiz!
+
 {% tabs %}
 {% tab title="Question" %}
 **Does this sketch work correctly?**
 {% endtab %}
+
 {% tab title="Answer" %}
 No!
 {% endtab %}
@@ -990,16 +1006,13 @@ No!
 {% tab title="Question" %}
 **What** _**does**_ **it do?**
 {% endtab %}
+
 {% tab title="Answer" %}
 When the button is pressed to turn the light on, it only blinks once.
 
-**Use println\(\) procedure calls and your brain to try and figure out why the sketch acts this way.**
-**What happens just after the button is pressed to turn the light on?**
-**What happens the next time the loop\(\) procedure runs?**
+**Use println\(\) procedure calls and your brain to try and figure out why the sketch acts this way.** **What happens just after the button is pressed to turn the light on?** **What happens the next time the loop\(\) procedure runs?**
 
-When the button is just pressed, the **if** statement conditions are true and the light mode changes form 0 \(off\) to 1 \(on\).
-The LEDs are then turned on for 100ms and then off for 100ms.
-However, next time the loop\(\) procedure runs, the **if** conditionals are false \(the button state has not changed\) and so the code that would blink the LED is not run again. Thus the single blink.
+When the button is just pressed, the **if** statement conditions are true and the light mode changes form 0 \(off\) to 1 \(on\). The LEDs are then turned on for 100ms and then off for 100ms. However, next time the loop\(\) procedure runs, the **if** conditionals are false \(the button state has not changed\) and so the code that would blink the LED is not run again. Thus the single blink.
 {% endtab %}
 {% endtabs %}
 
@@ -1086,7 +1099,7 @@ void loop(){
 
 _The phone rings, and you pick it up!_
 
-**Voice**: Hello, this is the president of Blinky Lite Fun Company Inc., I love the blinking light, its just so **me**! But, OMG, our competitor just brought a bike light into the market that has _4 modes_. We can't compete with them in the free market if we only have this lame bike light. We need **more** blinky, flashy light modes. Also, please make our logo bigger. We'll send you the check next week, for reals!
+> **Voice**: Hello, this is the president of Blinky Lite Fun Company Inc., I love the blinking light, its just so **me**! But, OMG, our competitor just brought a bike light into the market that has _4 modes_. We can't compete with them in the free market if we only have this lame bike light. We need **more** blinky, flashy light modes. Also, please make our logo bigger. We'll send you the check next week, for reals!
 
 The final design challenge is to take the sketch from Design Challenge 2 and upgrade it to have at least 4 modes: off, all-on, blinking LEDs, and 'wave'.
 
@@ -1126,8 +1139,6 @@ Here is an example of the finished project code:
 {% endtab %}
 
 {% tab title="Example Code" %}
-
-
 ```c
 /*
  *  Bike light, final version
