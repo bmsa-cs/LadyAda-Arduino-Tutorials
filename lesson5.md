@@ -28,7 +28,7 @@ On the left, the switch is **open** and no current flows. On the right, the swit
 
 ![](.gitbook/assets/light_switch_inside.jpg) \(thanks wikipedia!\)
 
-In this photo, you can see the internals of a light switch. The two wires connect to the top and bottom. The flat bar that goes verically down the middle is what is physically moved to connect or disconnect.
+In this photo, you can see the internals of a light switch. The two wires connect to the top and bottom. The flat bar that goes vertically down the middle is what is physically moved to connect or disconnect.
 
 Light switches are great but we need something smaller. We'll be primarily using 6mm tactile button switches.
 
