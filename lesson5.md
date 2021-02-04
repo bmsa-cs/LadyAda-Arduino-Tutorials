@@ -64,9 +64,13 @@ Power up the Arduino and try pressing the button. The LED should light up when t
 
 [![](.gitbook/assets/buttonpress1_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/buttonpress1.jpg)
 
-> **Switch capability**
->
-> Before you try to turn a 100W lightbulb on and off using a pushbutton switch, be aware that switches have **ratings** that will tell you the maximum amount of current and voltage they can switch. The little switches are only rated for a few volts and milliAmps. Big switches such as wall light switches are rated for 120V and many Amperes. Make sure you choose the right switch for the job or you may accidentally cause a small fire!
+> \*\*\*\*
+
+{% hint style="warning" %}
+**Switch capability**
+
+Before you try to turn a 100W lightbulb on and off using a pushbutton switch, be aware that switches have **ratings** that will tell you the maximum amount of current and voltage they can switch. The little switches are only rated for a few volts and milliAmps. Big switches such as wall light switches are rated for 120V and many Amperes. Make sure you choose the right switch for the job or you may accidentally cause a small fire!
+{% endhint %}
 
 ### Quick Quiz!
 
@@ -137,21 +141,25 @@ Now use a wire to alternate between connecting **Pin 2** to 5V and Ground throug
 
  __[![](.gitbook/assets/tielow_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/tielow.jpg) _Switch input tied LOW \(ground\)_
 
-You should see it print out two messages depending on whether a the wire jumper connects the input to `HIGH` \(5V\) or LOW \(ground\) voltage. Dont forget, in digital binary land, `HIGH` is another word for 1 and LOW is another word for 0.
+You should see it print out two messages depending on whether a the wire jumper connects the input to `HIGH` \(5V\) or LOW \(ground\) voltage. Dont forget, in digital binary land, `HIGH` is another word for 1 and `LOW` is another word for 0.
 
-![](.gitbook/assets/switchreadout.jpg)
+{% hint style="warning" %}
+**Valid inputs**
 
-> **Valid inputs**
->
-> The best way to completely destroy a microcontroller such as an Arduino is to feed it voltages that are much too high. Make sure your input voltages are between 0 and 5V! **Never connect a 9V battery directly into an input pin, it will fry the pin for good and possibly destroy the Arduino microcontroller!**
->
-> **Whats this 100Ω resistor all about?** There's a 100Ω resistor we use to connect the input pin to either `HIGH` or LOW voltage. Why is it there? Well, lets say you accidentally set `P2` to be an `OUTPUT` type pin, but then you connected it to 5V. If you write a LOW to the pin \(0V\) but its connected to `HIGH` \(5V\), you've basically caused a short circuit at that pin. This isn't very good for the pin and could damage it! The 100Ω resistor acts as a buffer, to protect the pin from short circuits.
+The best way to completely destroy a microcontroller such as an Arduino is to feed it voltages that are much too high. Make sure your input voltages are between 0 and 5V! **Never connect a 9V battery directly into an input pin, it will fry the pin for good and possibly destroy the Arduino microcontroller!**
+{% endhint %}
+
+{% hint style="info" %}
+**Whats this 100Ω resistor all about?** There's a 100Ω resistor we use to connect the input pin to either `HIGH` or `LOW` voltage. Why is it there? Well, lets say you accidentally set `P2` to be an `OUTPUT` type pin, but then you connected it to 5V. If you write a `LOW` to the pin \(0V\) but its connected to `HIGH` \(5V\), you've basically caused a short circuit at that pin. This isn't very good for the pin and could damage it! The 100Ω resistor acts as a buffer, to protect the pin from short circuits.
+{% endhint %}
 
 ## Floating high above the clouds
 
 Of course, connecting and disconnecting a wire is a lot of work, and we'd like to replace that with a mechanical switch. Only thing is, our switch can only connect and disconnect two wires, it can't alternate connections.
 
 ![](.gitbook/assets/nopulldown.png)
+
+
 
 ![](.gitbook/assets/nopullup.png) _Fig 5.3 Our two alternative switch wiring possibilities_
 
@@ -191,22 +199,63 @@ Note that the strong and weak connections have nothing to do with whether the sw
 
 [![](.gitbook/assets/testswitchpullup_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/testswitchpullup.jpg)
 
-> Must a pullup/down resistor be 10KΩ?
->
-> You'll notice that both the Arduino schematic, and the examples here use a 10KΩ resistor as the pullup or pulldown. Is there something special about 10KΩ? Nope! While, it is pretty much univerally used as the 'default' value, most of the time you can use as high as 100KΩ or as low as 4.7KΩ. Going much lower will waste more power, going higher may give you unstable results \(due to microcontroller-internals that are not that important right now\). I suggest going with 10KΩ because they are common resistor values and people reading your schematic will be more likely to understand that its 'just a pullup resistor'.
+{% hint style="info" %}
+**Must a pullup/down resistor be 10KΩ?**
+
+You'll notice that both the Arduino schematic, and the examples here use a 10KΩ resistor as the pullup or pulldown. Is there something special about 10KΩ? Nope! While, it is pretty much univerally used as the 'default' value, most of the time you can use as high as 100KΩ or as low as 4.7KΩ. Going much lower will waste more power, going higher may give you unstable results \(due to microcontroller-internals that are not that important right now\). I suggest going with 10KΩ because they are common resistor values and people reading your schematic will be more likely to understand that its 'just a pullup resistor'.
+{% endhint %}
 
 ### Quick Quiz!
 
-* **With the pull-down resistor configuration, what is the value read by digitalRead\(\) when the button is pressed?**
-  * The returned value is 1 \(`HIGH`\)
-* **With the pull-down resistor configuration, what is the value read by digitalRead\(\) when the button is released?**
-  * The returned value is 0 \(LOW\)
-* **With the pull-up resistor configuration, what is the value read by digitalRead\(\) when the button is pressed?**
-  * The returned value is 0 \(LOW\)
-* **With the pull-up resistor configuration, what is the value read by digitalRead\(\) when the button is released?**
-  * The returned value is 1 \(`HIGH`\)
-* **Lets say you wanted to design a switch so that when its pressed, the value read from the pin is 1, and when it's released the value is 0. Would you use a pull-up or pull-down resistor configuration?**
-  * You would want to use a pull-down resistor configuration.
+{% tabs %}
+{% tab title="Question" %}
+**With the pull-down resistor configuration, what is the value read by `digitalRead()` when the button is pressed?**
+{% endtab %}
+
+{% tab title="Answer" %}
+The returned value is 1 \(`HIGH`\)
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Question" %}
+**With the pull-down resistor configuration, what is the value read by `digitalRead()` when the button is released?**
+{% endtab %}
+
+{% tab title="Answer" %}
+The returned value is 0 \(`LOW`\)
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Question" %}
+**With the pull-up resistor configuration, what is the value read by `digitalRead()`when the button is pressed?**
+{% endtab %}
+
+{% tab title="Answer" %}
+The returned value is 0 \(`LOW`\)
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Question" %}
+**With the pull-up resistor configuration, what is the value read by `digitalRead()` when the button is released?**
+{% endtab %}
+
+{% tab title="Answer" %}
+The returned value is 1 \(`HIGH`\)
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Question" %}
+**Let**'**s say you wanted to design a switch so that when its pressed, the value read from the pin is 1, and when it's released the value is 0. Would you use a pull-up or pull-down resistor configuration?**
+{% endtab %}
+
+{% tab title="Answer" %}
+You would want to use a pull-down resistor configuration.
+{% endtab %}
+{% endtabs %}
 
 Here is a small part of the Arduino schematic, [\(you can see the whole thing here\)](https:////www.arduino.cc/en/uploads/Main/Arduino-Diecimila-schematic.pdf)
 
@@ -397,8 +446,12 @@ Now its your turn: add another red LED and resistor to pin 11, modify the sketch
 
 Try to wire up the protoshield just from the schematic. If you're having trouble, [click here for a photo of the parts wired up.](https:////www.ladyada.net/images/arduino/2ledswitch.jpg)
 
+{% tabs %}
+{% tab title="First Tab" %}
 Here is one possible solution sketch:
+{% endtab %}
 
+{% tab title="Example Solution" %}
 ```c
 /*
  *  Switch and 2 LED test program
@@ -425,12 +478,14 @@ void loop(){
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Do it...or else!
 
 Having an LED turn on or off when a button is pressed is quite impressive, but it would be pretty odd if you had to press a button constantly to keep the TV on. What we want is an **alternating action switch**, where the press-and-release of a button does something, not just press-and-hold. Basically we want to test whether the button was _just_ released, or _just_ pressed.
 
-To do this, we need to keep track of the button input value, to see if its changed. This is called the **state** of a button. When [the state](https:////en.wikipedia.org/wiki/State_%28computer_science%29) changes \(an action occurs\), _that's_ when we want to perform an action.
+To do this, we need to keep track of the button input value, to see if it's changed. This is called the **state** of a button. When [the state](https:////en.wikipedia.org/wiki/State_%28computer_science%29) changes \(an action occurs\), _that's_ when we want to perform an action.
 
 ```c
 /*
@@ -634,16 +689,32 @@ All the bike light has to do is turn on when the button is clicked and turn off 
 
 The contracts are faxed and signed and now it's time to do your job.
 
-Here is a video demonstrating the functionality the customer wants
-
-* **Step 1. Wire up the 5 red LEDs onto your breadboard as shown in the schematic.**Use jumpers when necessary to connect all of **cathodes** \(the negative pin of the LED\) to ground. If you're having trouble figuring out the wiring, [click here for a high-res photo](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/liteoff.jpg).
+* **Step 1. Wire up the 5 red LEDs onto your breadboard as shown in the schematic.**Use jumpers when necessary to connect all of **cathodes** \(the negative pin of the LED\) to ground. If you're having trouble figuring out the wiring, see below for a photo.
 * **Step 2. Test the LEDs.** Write a simple sketch to verify you've wired them up correctly by blinking all the LEDs.
-* **Step 3. Wire up the switch as shown** \(or if its already on the breadboard from the previous projects, leave it as is\). If you're having trouble figuring out the wiring, [click here for a high-res photo](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/liteoff.jpg).
+* **Step 3. Wire up the switch as shown** \(or if its already on the breadboard from the previous projects, leave it as is\). If you're having trouble figuring out the wiring, see below for a photo.
 * **Step 4. Test the switch.** Modify an earlier sketch in this lesson so that when the button is held down, all of the LEDs turn on. When the button is released the LEDs turn off
-* **Step 5. Adapt the "Counting Presses" sketch** Instead of a variable called buttonPresses you have a variable called lightMode, which starts at 0 \(off\). The lightMode variable will keep track of the bike light state. When the button is clicked, check the lightMode value. **If it is 0** \(off\), set it 1 \(on\) and turn on all the LEDs, **otherwise** set it 0 \(off\) and turn off all the LEDs. \_Highlight the text below to see a hint \_When the button is pressed, use an if-else statement like this: if \(lightMode == 0\) { } else { }
+* **Step 5. Adapt the "Counting Presses" sketch** Instead of a variable called buttonPresses you have a variable called lightMode, which starts at 0 \(off\). The lightMode variable will keep track of the bike light state. When the button is clicked, check the lightMode value. **If it is 0** \(off\), set it 1 \(on\) and turn on all the LEDs, **otherwise** set it 0 \(off\) and turn off all the LEDs. 
 
+{% tabs %}
+{% tab title="Hint" %}
+Click the "Hint Answer" to see a hint!
+{% endtab %}
+
+{% tab title="Hint Answer" %}
+When the button is pressed, use an if-else statement like this:
+
+`if (lightMode == 0) { <some stuff goes here> } else { <some other stuff goes here> }`
+{% endtab %}
+{% endtabs %}
+
+![](.gitbook/assets/liteoff.jpg)
+
+{% tabs %}
+{% tab title="First Tab" %}
 Here is one possible solution sketch:
+{% endtab %}
 
+{% tab title="Example Solution" %}
 ```c
 /*
  *  Bike light, revision 1
@@ -698,6 +769,8 @@ void loop(){
   buttonState = val;                 // save the new state in our variable
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Brooklyn Debounce
 
@@ -901,8 +974,12 @@ The trick here is that you want to _split up_ your `loop()` procedure into two s
 
 Try to fix the code above so it does the right thing.
 
+{% tabs %}
+{% tab title="First Tab" %}
 Here is one solution:
+{% endtab %}
 
+{% tab title="Example Solution" %}
 ```c
 /*
  *  Bike light, revision 3: blinky
@@ -969,6 +1046,8 @@ void loop(){
   // If lightmode is 0, we dont have to do anything because the LEDs are already off!
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Design Challenge, part 3
 
@@ -980,29 +1059,41 @@ The final design challenge is to take the sketch from Design Challenge 2 and upg
 
 * **First, modify the first half of the sketch so that pressing the button cycles through all the modes, from mode 0 to mode 3.**
   * Use `println()` procedure calls to verify that you are successfully changing between all of the modes
-  * **Need a Hint?**
 
-    _Highlight the text below to see a clue_ 
+{% tabs %}
+{% tab title="First Tab" %}
+Need a Hint?
+{% endtab %}
 
-    * With only two modes, you can use an **if-else** statement, but with more than two, you'll need to handle multiple possibilities.
-    * Turns out that just like you can nest **if** statements, you can also nest **if-else** statements!
+{% tab title="Hint Answer" %}
+* With only two modes, you can use an **if-else** statement, but with more than two, you'll need to handle multiple possibilities.
+* Turns out that just like you can nest **if** statements, you can also nest **if-else** statements!
 
-      ```c
-      if ( condition1 ) {
-        do this;
-      } else {
-        if (condition2) {
-          do that;
-        } else {
-          if (condition3) {
-              jump around;
-          }
-        }
+  ```c
+  if ( condition1 ) {
+    do this;
+  } else {
+    if (condition2) {
+      do that;
+    } else {
+      if (condition3) {
+          jump around;
       }
-      ```
+    }
+  }
+  ```
+{% endtab %}
+{% endtabs %}
+
 * **After that is working, modify the second half of the sketch so that it performs the different effects for each mode.**
 
+{% tabs %}
+{% tab title="Example" %}
 Here is an example of the finished project code:
+{% endtab %}
+
+{% tab title="Example Code" %}
+
 
 ```c
 /*
@@ -1113,6 +1204,8 @@ void loop(){
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 **For extra credit**, come up with with some more flashy modes, and post your video to the [forums](https:////www.ladyada.net/forums)
 
