@@ -293,15 +293,15 @@ Make sure you don't confuse this for the **assignment operator =**.
 
 ```c
 if (digitalRead(buttonPin) != LOW) {
-  Serial.print("The button pin is not LOW ");
+  Serial.println("The button pin is not LOW ");
 }
 ```
 
 #### `>` Greater-than test
 
 ```c
-if ( var2 10 ) {
-  Serial.print("Variable #2 is larger than 10");
+if (var2 > 10 ) {
+  Serial.println("Variable #2 is larger than 10");
 }
 ```
 
@@ -309,7 +309,7 @@ if ( var2 10 ) {
 
 ```c
 if ( chickenstock < 10 ) {
-  Serial.print("We have less than 10 chickens in stock");
+  Serial.println("We have less than 10 chickens in stock");
 }
 ```
 
@@ -317,7 +317,7 @@ if ( chickenstock < 10 ) {
 
 ```c
 if ( 20 <= yearstolive ) {
-  Serial.print("Good news, you have at least 20 years left!");
+  Serial.println("Good news, you have at least 20 years left!");
 }
 ```
 
@@ -325,7 +325,7 @@ if ( 20 <= yearstolive ) {
 
 ```c
 if ( kitten() >= 6 ) {
-  Serial.print("The kitten() procedure returned a number larger than or equal to 6");
+  Serial.println("The kitten() procedure returned a number larger than or equal to 6");
 }
 ```
 
@@ -952,11 +952,11 @@ void loop(){
 
   // Now do whatever the lightMode indicates
   if (lightMode == 1) {
-    digitalWrite(led1Pin, `HIGH`);
-    digitalWrite(led2Pin, `HIGH`);
-    digitalWrite(led3Pin, `HIGH`);
-    digitalWrite(led4Pin, `HIGH`);
-    digitalWrite(led5Pin, `HIGH`);
+    digitalWrite(led1Pin, HIGH);
+    digitalWrite(led2Pin, HIGH);
+    digitalWrite(led3Pin, HIGH);
+    digitalWrite(led4Pin, HIGH);
+    digitalWrite(led5Pin, HIGH);
     delay(100);
     digitalWrite(led1Pin, LOW);
     digitalWrite(led2Pin, LOW);
@@ -999,8 +999,6 @@ The final design challenge is to take the sketch from Design Challenge 2 and upg
         }
       }
       ```
-
-    &lt;/span&gt;
 * **After that is working, modify the second half of the sketch so that it performs the different effects for each mode.**
 
 Here is an example of the finished project code:
@@ -1115,7 +1113,7 @@ void loop(){
 }
 ```
 
-&lt;/span&gt; **For extra credit**, come up with with some more flashy modes, and post your video to the [forums](https:////www.ladyada.net/forums)
+**For extra credit**, come up with with some more flashy modes, and post your video to the [forums](https:////www.ladyada.net/forums)
 
 **For triple-word-extra credit**, use the 9V battery pack to power your Arduino bike light and [duct tape it to your shirt!](https:////boingboing.net/images/cfa4827569_20070921device3.jpg)
 
