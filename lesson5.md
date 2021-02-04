@@ -262,9 +262,9 @@ void setup() {
 void loop(){
   val = digitalRead(switchPin);   // read input value and store it in val
   if (val == LOW) {               // check if the button is pressed
-    digitalWrite(ledPin, `HIGH`);   // turn LED on
+    digitalWrite(ledPin, HIGH);   // turn LED on
   }
-  if (val == `HIGH`) {              // check if the button is not pressed
+  if (val == HIGH) {              // check if the button is not pressed
     digitalWrite(ledPin, LOW);    // turn LED off
   }
 }
@@ -381,12 +381,12 @@ void setup() {
 void loop(){
   val = digitalRead(switchPin);    // read input value and store it in val
   if (val == LOW) {                // check if the button is pressed
-    digitalWrite(led1Pin, `HIGH`);   // turn LED #1 on
+    digitalWrite(led1Pin, HIGH);   // turn LED #1 on
     digitalWrite(led2Pin, LOW);    // turn LED #2 off
   }
-  if (val == `HIGH`) {               // check if the button is not pressed
+  if (val == HIGH) {               // check if the button is not pressed
     digitalWrite(led1Pin, LOW);    // turn LED #1 off
-    digitalWrite(led2Pin, `HIGH`);   // turn LED #2 on
+    digitalWrite(led2Pin, HIGH);   // turn LED #2 on
   }
 }
 ```
@@ -680,11 +680,11 @@ void loop(){
     if (val == LOW) {                // check if the button is pressed
       if (lightMode == 0) {          // light is off
         lightMode = 1;               // light is on!
-        digitalWrite(led1Pin, `HIGH`);
-        digitalWrite(led2Pin, `HIGH`);
-        digitalWrite(led3Pin, `HIGH`);
-        digitalWrite(led4Pin, `HIGH`);
-        digitalWrite(led5Pin, `HIGH`);
+        digitalWrite(led1Pin, HIGH);
+        digitalWrite(led2Pin, HIGH);
+        digitalWrite(led3Pin, HIGH);
+        digitalWrite(led4Pin, HIGH);
+        digitalWrite(led5Pin, HIGH);
       } else {
         lightMode = 0;               // light is on!
         digitalWrite(led1Pin, LOW);
@@ -762,11 +762,11 @@ void loop(){
       if (val == LOW) {                // check if the button is pressed
         if (lightMode == 0) {          // is the light off?
           lightMode = 1;               // turn light on!
-          digitalWrite(led1Pin, `HIGH`);
-          digitalWrite(led2Pin, `HIGH`);
-          digitalWrite(led3Pin, `HIGH`);
-          digitalWrite(led4Pin, `HIGH`);
-          digitalWrite(led5Pin, `HIGH`);
+          digitalWrite(led1Pin, HIGH);
+          digitalWrite(led2Pin, HIGH);
+          digitalWrite(led3Pin, HIGH);
+          digitalWrite(led4Pin, HIGH);
+          digitalWrite(led5Pin, HIGH);
         } else {
           lightMode = 0;               // turn light off!
           digitalWrite(led1Pin, LOW);
@@ -853,11 +853,11 @@ void loop(){
         if (lightMode == 0) {          // is the light off?
           lightMode = 1;               // turn light on!
 
-          digitalWrite(led1Pin, `HIGH`);
-          digitalWrite(led2Pin, `HIGH`);
-          digitalWrite(led3Pin, `HIGH`);     // blink on!
-          digitalWrite(led4Pin, `HIGH`);
-          digitalWrite(led5Pin, `HIGH`);
+          digitalWrite(led1Pin, HIGH);
+          digitalWrite(led2Pin, HIGH);
+          digitalWrite(led3Pin, HIGH);     // blink on!
+          digitalWrite(led4Pin, HIGH);
+          digitalWrite(led5Pin, HIGH);
 
           delay(100);
 
@@ -1072,19 +1072,19 @@ void loop(){
   }
 
   if (lightMode == 1) { // all-on
-    digitalWrite(led1Pin, `HIGH`);
-    digitalWrite(led2Pin, `HIGH`);
-    digitalWrite(led3Pin, `HIGH`);
-    digitalWrite(led4Pin, `HIGH`);
-    digitalWrite(led5Pin, `HIGH`);
+    digitalWrite(led1Pin, HIGH);
+    digitalWrite(led2Pin, HIGH);
+    digitalWrite(led3Pin, HIGH);
+    digitalWrite(led4Pin, HIGH);
+    digitalWrite(led5Pin, HIGH);
   }
 
   if (lightMode == 2) { // blinking
-    digitalWrite(led1Pin, `HIGH`);
-    digitalWrite(led2Pin, `HIGH`);
-    digitalWrite(led3Pin, `HIGH`);
-    digitalWrite(led4Pin, `HIGH`);
-    digitalWrite(led5Pin, `HIGH`);
+    digitalWrite(led1Pin, HIGH);
+    digitalWrite(led2Pin, HIGH);
+    digitalWrite(led3Pin, HIGH);
+    digitalWrite(led4Pin, HIGH);
+    digitalWrite(led5Pin, HIGH);
     delay(100);
     digitalWrite(led1Pin, LOW);
     digitalWrite(led2Pin, LOW);
@@ -1095,19 +1095,19 @@ void loop(){
   }
   if (lightMode == 3)  { // "wave"
     digitalWrite(led5Pin, LOW);
-    digitalWrite(led1Pin, `HIGH`);
+    digitalWrite(led1Pin, HIGH);
     delay(50);
     digitalWrite(led1Pin, LOW);
-    digitalWrite(led2Pin, `HIGH`);
+    digitalWrite(led2Pin, HIGH);
     delay(50);
     digitalWrite(led2Pin, LOW);
-    digitalWrite(led3Pin, `HIGH`);
+    digitalWrite(led3Pin, HIGH);
     delay(50);
     digitalWrite(led3Pin, LOW);
-    digitalWrite(led4Pin, `HIGH`);
+    digitalWrite(led4Pin, HIGH);
     delay(50);
     digitalWrite(led4Pin, LOW);
-    digitalWrite(led5Pin, `HIGH`);
+    digitalWrite(led5Pin, HIGH);
     delay(50);
     digitalWrite(led5Pin, LOW);
   }
