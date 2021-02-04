@@ -30,9 +30,11 @@ In the images above you can see how there are two kinds of metal strips. There a
 
 In this lesson, we will show pictures of both the tiny breadboard on a protoshield and also using a 'standard' breadboard without a shield. However, after this lesson, you'll be more on your own to figure out how to connect up the standard breadboard, OK?
 
-> **Warning!**
->
-> Distressing as it may sound, solderless breadboards can be **very** flakey, especially as they age. If you're having problems with your circuit, it could be that the little metal clips on the inside aren't working well. Try poking it with your finger, or moving it to a different section.
+{% hint style="warning" %}
+**Warning!**
+
+Distressing as it may sound, solderless breadboards can be **very** flakey, especially as they age. If you're having problems with your circuit, it could be that the little metal clips on the inside aren't working well. Try poking it with your finger, or moving it to a different section.
+{% endhint %}
 
 ## Say hello to wires!
 
@@ -222,7 +224,7 @@ Hmm....
 
 ## Re-visiting an old friend
 
-Start up the Arduino software again and open up the **MyBlink** sketch from lesson 2. If you left it with delay times of 10ms, you may want to modify it so its back to 500ms on and 500ms off. Upload the sketch to your Arduino. Now change your breadboard wiring so that it matches this schematic.
+Start up the Arduino software again and open up the **MyBlink** sketch from [lesson 2](lesson2.md). If you left it with delay times of 10ms, you may want to modify it so its back to 500ms on and 500ms off. Upload the sketch to your Arduino. Now change your breadboard wiring so that it matches this schematic.
 
 ![](.gitbook/assets/lesson3sch4.jpg)
 
