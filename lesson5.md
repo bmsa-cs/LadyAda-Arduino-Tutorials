@@ -47,7 +47,6 @@ Normally, the two wires are disconnected \(**normally open\)** but when you pres
 To get the buttons to sit better in the protoshield, you may want to straighten out the legs \(just squish them with a pair of pliers\) so that they look like the button on the left.
 
 ### Quick Quiz!
-
 * **Find 5 things around the house that have switches. Whats the average number of switches per device?**
 
 ## Light Switch
@@ -73,22 +72,42 @@ Before you try to turn a 100W lightbulb on and off using a pushbutton switch, be
 {% endhint %}
 
 ### Quick Quiz!
-
-* **What does this wiring setup do? \(The LED is connected to ground, but its kind of hidden in this photo\) Make a guess and then build it and test your guess.**
+{% tabs %}
+{% tab title="Question" %}
+**What does this wiring setup do? \(The LED is connected to ground, but its kind of hidden in this photo\) Make a guess and then build it and test your guess.**
 
     [![](.gitbook/assets/miswire_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/miswire.jpg)
-
-* The switch is oriented so that the LED is always on!
+{% endtab %}
+{% tab title="Answer" %}
+The switch is oriented so that the LED is always on!
+{% endtab %}
+{% endtabs %}
 
 These switches have the part number **B3F-1000**, [here is a datasheet webpage for the part](https:////www.adafruit.com/datasheets/B3F-1000-Omron.pdf). There's a lot of information, but learning how to navigate these sorts of pages is rather important. Use your detective skills to figure out the follwing:
-
-* **What is the maxiumum amount of current this button can switch?**
-  * 50 mA
-* **What is the maximum voltage you can use this switch for?**
-  * 24V
-* **What is the recommended Operating Force \(how hard the button is pressed\) for the B3F-1000?**
-  * 0.98 Newtons \(100 gf\)
-
+{% tabs %}
+{% tab title="Question" %}
+**What is the maxiumum amount of current this button can switch?**
+{% endtab %}
+{% tab title="Answer" %}
+50 mA
+{% endtab %}
+{% endtabs %}
+{% tabs %}
+{% tab title="Question" %}
+**What is the maximum voltage you can use this switch for?**
+{% endtab %}
+{% tab title="Answer" %}
+24V
+{% endtab %}
+{% endtabs %}
+{% tabs %}
+{% tab title="Question" %}
+**What is the recommended Operating Force \(how hard the button is pressed\) for the B3F-1000?**
+{% endtab %}
+{% tab title="Answer" %}
+0.98 Newtons \(100 gf\)
+{% endtab %}
+{% endtabs %}
 ## DigitalRead
 
 Switches are great for controlling current, as shown by our little light switch demo. But they're even better as input devices!
@@ -323,7 +342,7 @@ This sketch introduces a completely new and exciting type of statement, the **if
 
 | if | \(test statement\) | {statements to perform if test is True} |
 | :---: | :---: | :---: |
-| if | \( val == LOW \) | { digitalWrite\(ledPin, `HIGH`\); } |
+| if | \( val == LOW \) | { digitalWrite\(ledPin, HIGH\); } |
 
 The **if** statement is the first statement that is **conditional**, it only runs the statements if a condition is true. In this case, the conditions are "is the button pressed?" and "is the button not pressed?"
 
@@ -381,12 +400,20 @@ if ( kitten() >= 6 ) {
 
 ### Quick Quiz!
 
+{% tabs %}
+{% tab title="Question" %}
 Modify the sketch so that it does the opposite, when the button is pressed the LED turns off and when it is released it turns on. Remember to change the sketch only, use the same circuitry!
-
+{% endtab %}
+{% tab title="Answer" %}
 Swap the lines `digitalWrite(ledPin, HIGH);` and `digitalWrite(ledPin, LOW);`
+{% endtab %}
+{% endtabs %}
 
+{% tabs %}
+{% tab title="Question" %}
 Modify the sketch so that the LED blinks 5 times a second \(100ms on and 100ms off\) when the button is pressed and is completely off when the button is released.
-
+{% endtab %}
+{% tab title="Answer" %}
 Sample Solution:
 
 ```c
@@ -410,44 +437,17 @@ void loop(){
 ```
 
 **Note that you don't need to do anything if the `switchPin` is `HIGH` because at the end of the `val == LOW` statements the LED has been turned off!**
+{% endtab %}
+{% endtabs %}
 
-```c
-/*
- *  Switch and 2 LED test program
- */
-
-int led1Pin = 12;               // LED #1 is connected to pin 12
-int led2Pin = 11;               // LED #2 is connected to pin 11
-int switchPin = 2;              // switch is connected to pin 2
-int val;                        // variable for reading the pin status
-
-void setup() {
-  pinMode(led1Pin, OUTPUT);     // Set the LED #1 pin as output
-  pinMode(led2Pin, OUTPUT);     // Set the LED #2 pin as output
-  pinMode(switchPin, INPUT);    // Set the switch pin as input
-}
-
-void loop(){
-  val = digitalRead(switchPin);    // read input value and store it in val
-  if (val == LOW) {                // check if the button is pressed
-    digitalWrite(led1Pin, HIGH);   // turn LED #1 on
-    digitalWrite(led2Pin, LOW);    // turn LED #2 off
-  }
-  if (val == HIGH) {               // check if the button is not pressed
-    digitalWrite(led1Pin, LOW);    // turn LED #1 off
-    digitalWrite(led2Pin, HIGH);   // turn LED #2 on
-  }
-}
-```
-
-Now its your turn: add another red LED and resistor to pin 11, modify the sketch so that when the button is pressed one LED is lit and the other one is off and when the button is released the first LED is off and the second LED is lit.
+**Now its your turn:** add another red LED and resistor to pin 11, modify the sketch so that when the button is pressed one LED is lit and the other one is off and when the button is released the first LED is off and the second LED is lit.
 
 ![](.gitbook/assets/2ledswitch.png)
 
 Try to wire up the protoshield just from the schematic. If you're having trouble, [click here for a photo of the parts wired up.](https:////www.ladyada.net/images/arduino/2ledswitch.jpg)
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Example" %}
 Here is one possible solution sketch:
 {% endtab %}
 
@@ -581,12 +581,24 @@ In the **if-else** statement, we simply examine **val** to deterimine if the las
 Finally, we make sure that we've updated the button state variable with the current state.
 
 ### Quick Quiz!
+{% tabs %}
+{% tab title="Question" %}
+\*\*Remove \(or comment out\) the line that says "buttonState = val;" from the sketch and re-upload it to the Arduino.   What happens now?
 
-* \*\*Remove \(or comment out\) the line that says "buttonState = val;" from the sketch and re-upload it to the Arduino.   What happens now?
-  * When the button is held down, the Arduino prints out "Button just pressed" over and over again. When its released, nothing is printed
-* **Why does this happen? Go through the sketch, keeping track of what buttonState and val are storing at each line.**
-  * When the Arduino starts up, it sets buttonState to LOW \(assuming the button isn't pressed as it is reset\). Whenever the button pin is read as `HIGH` the \(val != buttonState\) test is true and it prints out a message. The buttonState is never set to `HIGH` so it never prints "Button is released" and it always passes the \(val != buttonState\) test
+{% endtab %}
+{% tab title="Answer" %}
+When the button is held down, the Arduino prints out "Button just pressed" over and over again. When its released, nothing is printed.
+{% endtab %}
+{% endtabs %}
 
+{% tabs %}
+{% tab title="Question" %}
+**Why does this happen? Go through the sketch, keeping track of what buttonState and val are storing at each line.**
+
+{% tab title="Answer" %}
+When the Arduino starts up, it sets buttonState to LOW \(assuming the button isn't pressed as it is reset\). Whenever the button pin is read as `HIGH` the \(val != buttonState\) test is true and it prints out a message. The buttonState is never set to `HIGH` so it never prints "Button is released" and it always passes the \(val != buttonState\) test
+{% endtab %}
+{% endtabs %}
 ## Counting presses
 
 A pretty useful techinque you'll want to add to your collection of sketch-knowledge is how to keep track of button presses. Try this sketch
@@ -625,18 +637,23 @@ void loop(){
 We've added one new thing in this sketch, which is the ++ operator. Simply, the statement "buttonPresses++" **increments** \(adds 1 to\) the buttonPresses variable. This is a shortcut for "buttonPresses = buttonPresses + 1".
 
 ### Quick Quiz!
+{% tabs %}
+{% tab title="Question" %}
+*\*Modify the sketch so that message is only printed when the button is released, not when it's pressed.\*\*
+{% endtab %}
+{% tab title="Answer" %}
+Change the `val == LOW` test to `val == HIGH`
+{% endtab %}
+{% endtabs %}
 
-* \*\*Modify the sketch so that message is only printed when the button is released, not when it's pressed.
-
-    \*\*
-
-  * Change the "val == LOW" test to "val == `HIGH`"
-
-* **Modify the sketch so its a countdown device! Step 1.** Have the buttonPresses variable start at 10.**Step 2.** Every time the button is pressed, _decrement_ the buttonPresses variable \(use the -- operator, which does the opposite of ++\).**Step 3.** Once you have that working, have the Arduino print out "We have _x_ presses to go till takeoff!" where x is the number of presses remaining, but only if the number of presses left is larger than 0 \(check the conditional test table above to see how to test if a variable is larger than a number\)**Step 4.** Once you have that working, make the Arduino print out "EXPLODE!" on the last button press.\*\*
+{% tabs %}
+{% tab title="Question" %}
+**Modify the sketch so its a countdown device! Step 1.** Have the buttonPresses variable start at 10.**Step 2.** Every time the button is pressed, _decrement_ the buttonPresses variable \(use the -- operator, which does the opposite of ++\).**Step 3.** Once you have that working, have the Arduino print out "We have _x_ presses to go till takeoff!" where x is the number of presses remaining, but only if the number of presses left is larger than 0 \(check the conditional test table above to see how to test if a variable is larger than a number\)**Step 4.** Once you have that working, make the Arduino print out "EXPLODE!" on the last button press.\*\*
 
   ![](.gitbook/assets/takeoff.jpg)
-
-#### Possible Solution
+{% endtab %}
+{% tab title="Answer" %}
+Possible Solution
 
 ```c
 /*
@@ -674,6 +691,8 @@ void loop(){
     }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Design challenge, part 1
 
@@ -958,24 +977,38 @@ You are feeling pretty proud because you remembered that you did not have to tur
 Upload this sketch to your bike light and try it out.
 
 ### Quick Quiz!
+{% tabs %}
+{% tab title="Question" %}
+**Does this sketch work correctly?**
+{% endtab %}
+{% tab title="Answer" %}
+No!
+{% endtab %}
+{% endtabs %}
 
-* **Does this sketch work correctly?**
-  * No!
-* **What** _**does**_ **it do?**
-  * When the button is pressed to turn the light on, it only blinks once.
-* **Use println\(\) procedure calls and your brain to try and figure out why the sketch acts this way.**
-  * What happens just after the button is pressed to turn the light on?
-  * What happens the next time the loop\(\) procedure runs?\*\*
-    * When the button is just pressed, the **if** statement conditions are true and the light mode changes form 0 \(off\) to 1 \(on\).
-    * The LEDs are then turned on for 100ms and then off for 100ms.
-    * However, next time the loop\(\) procedure runs, the **if** conditionals are false \(the button state has not changed\) and so the code that would blink the LED is not run again. Thus the single blink.
+{% tabs %}
+{% tab title="Question" %}
+**What** _**does**_ **it do?**
+{% endtab %}
+{% tab title="Answer" %}
+When the button is pressed to turn the light on, it only blinks once.
+
+**Use println\(\) procedure calls and your brain to try and figure out why the sketch acts this way.**
+**What happens just after the button is pressed to turn the light on?**
+**What happens the next time the loop\(\) procedure runs?**
+
+When the button is just pressed, the **if** statement conditions are true and the light mode changes form 0 \(off\) to 1 \(on\).
+The LEDs are then turned on for 100ms and then off for 100ms.
+However, next time the loop\(\) procedure runs, the **if** conditionals are false \(the button state has not changed\) and so the code that would blink the LED is not run again. Thus the single blink.
+{% endtab %}
+{% endtabs %}
 
 The trick here is that you want to _split up_ your `loop()` procedure into two sections. The first section will do all the button checking and debouncing stuff. It will also determine whether the button state has changed and if so, it will change the `lightMode*`variable appropriately. Once that dirty work has been done, the next section of code will examine the `lightMode` variable and then perform the correct actions for that mode.
 
 Try to fix the code above so it does the right thing.
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Example" %}
 Here is one solution:
 {% endtab %}
 
