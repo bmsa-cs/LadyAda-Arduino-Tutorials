@@ -140,9 +140,11 @@ As we mentioned before, its easy to figure out which side of an LED is positive 
 
 We're going to now use the breadboard to light up an LED. You will need a breadboard, an LED and a 1.0K ohm resistor \(brown black red gold\). If you have a protoshield, [make sure its assembled first](https://learn.adafruit.com/adafruit-proto-shield-arduino). Then, place the tiny breadboard on top. You can remove the backing to stick it on \(which is permanent\) or you can just use double-sided tape. If you have a regular breadboard you'll need 2 jumper wires as well.
 
-> Important Note!
->
-> While LEDs will not work when placed backwards, you don't have to worry about whether it will be damaged: as long as there is a series resistor of at least 100 ohms next to it, the LED will survive the experience!
+{% hint style="warning" %}
+**Important Note!**
+
+While LEDs will not work when placed backwards, you don't have to worry about whether it will be damaged: as long as there is a series resistor of at least 100 ohms next to it, the LED will survive the experience!
+{% endhint %}
 
 However, using an LED without a series resistor is a sure-fire way to kill it! \(You'll see a bright flash and it may turn dark\) **Always** use a resistor! A 1.0K ohm is a good place to start. We'll cover how to figure out the best resistor value later on.
 
