@@ -134,7 +134,7 @@ If you recall from [lesson 1](lesson1.md), Arduino NG users had to make sure tha
 
 _Look again! Its a tiny LED_
 
-As we mentioned before, its easy to figure out which side of an LED is positive and which one is negative. The positive leg is slightly longer and if you look inside, the chunk of metal is larger on the negaive side.
+As we mentioned before, it's easy to figure out which side of an LED is positive and which one is negative. The positive leg is slightly longer and if you look inside, the chunk of metal is larger on the negative side.
 
 ![](.gitbook/assets/leddetail_t.jpg)
 
