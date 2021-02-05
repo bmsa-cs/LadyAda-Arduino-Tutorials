@@ -120,7 +120,7 @@ These switches have the part number **B3F-1000**, [here is a datasheet webpage f
 
 Switches are great for controlling current, as shown by our little light switch demo. But they're even better as input devices!
 
-In previous lessons we set a pin on the microcontroller \(say **pin 13**\) to `HIGH` \(5V\) or `LOW` \(ground, 0V\) using the **DigitalWrite** procedure. Now we get to do the opposite. We will set the voltage on a pin to 5V or ground and then use `DigitalRead` to inquire whether that pin is `HIGH` or `LOW`
+In previous lessons we set a pin on the microcontroller \(say **pin 13**\) to `HIGH` \(5V\) or `LOW` \(ground, 0V\) using the `digitalWrite` procedure. Now we get to do the opposite. We will set the voltage on a pin to 5V or ground and then use `digitalRead` to inquire whether that pin is `HIGH` or `LOW`
 
 For our first test, we will use a wire as our switch. Turn on the Arduino and run this little sketch
 
@@ -153,7 +153,7 @@ We also use the new `digitalRead()` procedure, which just takes as an input the 
 
 `Serial.println(digitalRead(switchPin)); // Read the pin and display the value`
 
-The `digitalRead()` procedure **returns a result** when its done. That result is either 0 \(`LOW`\) or 1 \(`HIGH`\) depending on what it saw when it looked at the pin's voltage. In this case, we read the pin and then **pass the result** as an input to _another_ procedure, `println()`. Sure we could use a variable to hold the result from `digitalRead()` and then use that variable as input to `println()` but this is much more succinct.
+The `digitalRead()` procedure **returns a result** when it's done. That result is either 0 \(`LOW`\) or 1 \(`HIGH`\) depending on what it saw when it looked at the pin's voltage. In this case, we read the pin and then **pass the result** as an input to _another_ procedure, `println()`. Sure we could use a variable to hold the result from `digitalRead()` and then use that variable as input to `println()` but this is much more succinct.
 
 ```c
 val = digitalRead(switchPin);      // read the pin and save it into val
@@ -168,7 +168,7 @@ Now use a wire to alternate between connecting **Pin 2** to 5V and Ground throug
 
 _\__[![](.gitbook/assets/tielow_t.jpg)](https://github.com/bmsa-cs/LadyAda-Arduino-Tutorials/tree/0229aba967c64040fd37b249b90f53855c7030bd/images/tielow.jpg) _\_Switch input tied LOW \(ground\)_
 
-You should see it print out two messages depending on whether a the wire jumper connects the input to `HIGH` \(5V\) or LOW \(ground\) voltage. Dont forget, in digital binary land, `HIGH` is another word for 1 and `LOW` is another word for 0.
+You should see it print out two messages depending on whether a the wire jumper connects the input to `HIGH` \(5V\) or LOW \(ground\) voltage. Don't forget, in digital binary land, `HIGH` is another word for 1 and `LOW` is another word for 0.
 
 {% hint style="warning" %}
 **Valid inputs**
