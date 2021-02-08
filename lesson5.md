@@ -651,7 +651,7 @@ We've added one new thing in this sketch, which is the ++ operator. Simply, the 
 
 {% tabs %}
 {% tab title="Question" %}
-_\_Modify the sketch so that message is only printed when the button is released, not when it's pressed.\*\*
+**Modify the sketch so that message is only printed when the button is released, not when it's pressed.**
 {% endtab %}
 
 {% tab title="Answer" %}
@@ -661,12 +661,17 @@ Change the `val == LOW` test to `val == HIGH`
 
 {% tabs %}
 {% tab title="Question" %}
-**Modify the sketch so its a countdown device! Step 1.** Have the buttonPresses variable start at 10.**Step 2.** Every time the button is pressed, _decrement_ the buttonPresses variable \(use the -- operator, which does the opposite of ++\).**Step 3.** Once you have that working, have the Arduino print out "We have _x_ presses to go till takeoff!" where x is the number of presses remaining, but only if the number of presses left is larger than 0 \(check the conditional test table above to see how to test if a variable is larger than a number\)**Step 4.** Once you have that working, make the Arduino print out "EXPLODE!" on the last button press.\*\*
+**Modify the sketch so its a countdown device!**
+
+* **Step 1.** Have the buttonPresses variable start at 10.
+* **Step 2.** Every time the button is pressed, _decrement_ the buttonPresses variable \(use the -- operator, which does the opposite of ++\)**.**
+* **Step 3.** Once you have that working, have the Arduino print out "We have _x_ presses to go till takeoff!" where x is the number of presses remaining, but only if the number of presses left is larger than 0 \(check the conditional test table above to see how to test if a variable is larger than a number\)
+* **Step 4.** Once you have that working, make the Arduino print out "EXPLODE!" on the last button press.
 
 ![](.gitbook/assets/takeoff.jpg)
 {% endtab %}
 
-{% tab title="Answer" %}
+{% tab title="Possible Solution" %}
 Possible Solution
 
 ```c
@@ -730,7 +735,7 @@ The contracts are faxed and signed and now it's time to do your job.
 
 {% tabs %}
 {% tab title="Hint" %}
-Click the "Hint Answer" to see a hint!
+**Click the "Hint Answer" to see a hint!**
 {% endtab %}
 
 {% tab title="Hint Answer" %}
@@ -743,8 +748,8 @@ When the button is pressed, use an if-else statement like this:
 ![](.gitbook/assets/liteoff.jpg)
 
 {% tabs %}
-{% tab title="First Tab" %}
-Here is one possible solution sketch:
+{% tab title="Hint" %}
+**Here is one possible solution sketch:**
 {% endtab %}
 
 {% tab title="Example Solution" %}
@@ -1022,7 +1027,7 @@ Try to fix the code above so it does the right thing.
 
 {% tabs %}
 {% tab title="Example" %}
-Here is one solution:
+**Here is one sample solution:**
 {% endtab %}
 
 {% tab title="Example Solution" %}
@@ -1107,11 +1112,11 @@ The final design challenge is to take the sketch from Design Challenge 2 and upg
   * Use `println()` procedure calls to verify that you are successfully changing between all of the modes
 
 {% tabs %}
-{% tab title="First Tab" %}
-Need a Hint?
+{% tab title="Hint" %}
+**Need a Hint?**
 {% endtab %}
 
-{% tab title="Hint Answer" %}
+{% tab title="Answer" %}
 * With only two modes, you can use an **if-else** statement, but with more than two, you'll need to handle multiple possibilities.
 * Turns out that just like you can nest **if** statements, you can also nest **if-else** statements!
 
@@ -1134,11 +1139,11 @@ Need a Hint?
 * **After that is working, modify the second half of the sketch so that it performs the different effects for each mode.**
 
 {% tabs %}
-{% tab title="Example" %}
-Here is an example of the finished project code:
+{% tab title="Finished Project" %}
+**Here is an example of the finished project code:**
 {% endtab %}
 
-{% tab title="Example Code" %}
+{% tab title="Example Finished Code" %}
 ```c
 /*
  *  Bike light, final version
