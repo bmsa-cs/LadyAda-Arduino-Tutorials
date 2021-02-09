@@ -8,7 +8,7 @@ We've done a lot so far, blinking lights, printing messages...all of that stuff 
 
 | Image | Item | Purchase | Price |
 | :---: | :---: | :---: | :---: |
-| ![](.gitbook/assets/diecimilla%20%281%29.jpg) | Assembled Arduino board, preferrably a Diecimila \(or whatever the latest version is\) but NG is OK too | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |
+| ![](.gitbook/assets/diecimilla%20%281%29.jpg) | Assembled Arduino board, preferably a Diecimila \(or whatever the latest version is\) but NG is OK too | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&cPath=17&products_id=50) | $35 |
 | ![](.gitbook/assets/usbcable%20%281%29.jpg) | USB Cable. Standard A-B cable is required. Any length is OK. | [Adafruit](https://www.adafruit.com/index.php?main_page=product_info&products_id=62)   Or any computer supply store | $5 |
 | ![](.gitbook/assets/3mmredled_t.jpg) | 5 Red LEDs   The brighter the better | Any electronics supply store | $3 |
 | ![](.gitbook/assets/6mmswitch_t.jpg) | 6mm tact switch \(pushbutton\) | Any electronics supply store | $0.50 |
