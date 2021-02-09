@@ -408,7 +408,7 @@ if ( kitten() >= 6 ) {
 
 {% tabs %}
 {% tab title="Question" %}
-Modify the sketch so that it does the opposite, when the button is pressed the LED turns off and when it is released it turns on. Remember to change the sketch only, use the same circuitry!
+**Modify the sketch so that it does the opposite, when the button is pressed the LED turns off and when it is released it turns on. Remember to change the sketch only, use the same circuitry!**
 {% endtab %}
 
 {% tab title="Answer" %}
@@ -418,7 +418,7 @@ Swap the lines `digitalWrite(ledPin, HIGH);` and `digitalWrite(ledPin, LOW);`
 
 {% tabs %}
 {% tab title="Question" %}
-Modify the sketch so that the LED blinks 5 times a second \(100ms on and 100ms off\) when the button is pressed and is completely off when the button is released.
+**Modify the sketch so that the LED blinks 5 times a second \(100ms on and 100ms off\) when the button is pressed and is completely off when the button is released.**
 {% endtab %}
 
 {% tab title="Answer" %}
@@ -456,7 +456,7 @@ Try to wire up the protoshield just from the schematic. If you're having trouble
 
 {% tabs %}
 {% tab title="Example" %}
-Here is one possible solution sketch:
+**Here is one possible solution sketch:**
 {% endtab %}
 
 {% tab title="Example Solution" %}
