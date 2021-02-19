@@ -1134,6 +1134,21 @@ The final design challenge is to take the sketch from Design Challenge 2 and upg
   }
   ```
 {% endtab %}
+
+{% tab title="Answer \#2" %}
+* While you can nest if-else statements as seen in the first answer, a cleaner option for presenting multiple conditions or choices is to use an "else if" statement.
+* ```c
+  if ( condition1 ) {
+    do this;
+  }
+  else if (condition2) {
+      do that;
+  }
+  else if (condition3) {
+      jump around;
+  }
+  ```
+{% endtab %}
 {% endtabs %}
 
 * **After that is working, modify the second half of the sketch so that it performs the different effects for each mode.**
@@ -1184,18 +1199,15 @@ void loop(){
       if (val == LOW) {                // check if the button is pressed
         if (lightMode == 0) {          // if its off
           lightMode = 1;               // turn lights on!
-        } else {
-          if (lightMode == 1) {        // if its all-on
+        }
+        else if (lightMode == 1) {        // if its all-on
             lightMode = 2;             // make it blink!
-          } else {
-            if (lightMode == 2) {      // if its blinking
+        }
+        else if (lightMode == 2) {      // if its blinking
               lightMode = 3;           // make it wave!
-            } else {
-              if (lightMode == 3) { //  if its waving,
+        }
+        else if (lightMode == 3) { //  if its waving,
                 lightMode = 0;           // turn light off!
-              }
-            }
-          }
         }
       }
     }
